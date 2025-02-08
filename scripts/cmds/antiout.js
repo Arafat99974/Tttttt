@@ -2,12 +2,12 @@ module.exports = {
   config: {
     name: "antiout",
     version: "1.0",
-    author: "AceGun",
+    author: "𝗦𝗵𝗔𝗻",
     countDown: 5,
     role: 0,
     shortDescription: "Enable or disable antiout",
     longDescription: "",
-    category: "boxchat",
+    category: "𝗕𝗢𝗫 𝗖𝗛𝗔𝗧",
     guide: "{pn} {{[on | off]}}",
     envConfig: {
       deltaNext: 5
