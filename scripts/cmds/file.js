@@ -5,12 +5,12 @@ module.exports = {
 		name: "file",
 		aliases: ["files", "sendfile"],
 		version: "1.0",
-		author: "404",
+		author: "𝗦𝗵𝗔𝗻",
 		countDown: 5,
 		role: 0,
 		shortDescription: "Send bot script",
 		longDescription: "Send bot specified file ",
-		category: "𝗢𝗪𝗡𝗘𝗥",
+		category: "𝗕𝗢𝗧 𝗠𝗔𝗡𝗔𝗚𝗘𝗠𝗘𝗡𝗧",
 		guide: "{pn} file name. Ex: .{pn} filename"
 	},
 
