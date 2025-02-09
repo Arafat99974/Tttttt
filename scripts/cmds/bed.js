@@ -5,7 +5,7 @@ module.exports = {
 	config: {
 		name: "bed",
 		version: "1.0",
-		author: "SiAM",
+		author: "ShAn",
 		countDown: 5,
 		role: 0,
 		shortDescription: "Make bed meme",
