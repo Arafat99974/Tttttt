@@ -31,7 +31,18 @@ module.exports = {
 "https://i.postimg.cc/ZqcPbbmk/FB-IMG-1738608953531.jpg",
 "https://i.postimg.cc/0QXpSVrc/FB-IMG-1738608958212.jpg",
 "https://i.postimg.cc/LsRBFqrB/FB-IMG-1738608962809.jpg",
-"https://i.postimg.cc/Zn96x6dZ/FB-IMG-1738608967961.jpg"]
+"https://i.postimg.cc/Zn96x6dZ/FB-IMG-1738608967961.jpg",
+"https://i.postimg.cc/nL542D5H/FB-IMG-1738862084167.jpg",
+"https://i.postimg.cc/qMXGrgtL/FB-IMG-1738862088864.jpg",
+"https://i.postimg.cc/wTVDPPP4/FB-IMG-1738862454309.jpg",
+"https://i.postimg.cc/KzMnHYSt/FB-IMG-1738862521937.jpg",
+"https://i.postimg.cc/6Q7R8QQF/FB-IMG-1738862710176.jpg",
+"https://i.postimg.cc/4dD1f9b8/FB-IMG-1738862852758.jpg",
+"https://i.postimg.cc/LXYTFTfY/FB-IMG-1738862905255.jpg",
+"https://i.postimg.cc/J03jRdhn/FB-IMG-1738862929473.jpg",
+"https://i.postimg.cc/wBbVrPtY/FB-IMG-1738863131269.jpg",
+"https://i.postimg.cc/5y8S62sf/FB-IMG-1738902128104.jpg"
+	 ]
 
 let img = link[Math.floor(Math.random()*link.length)]
 api.setMessageReaction("✅", event.messageID, (err) => {}, true);
