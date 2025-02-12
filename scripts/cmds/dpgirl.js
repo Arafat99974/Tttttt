@@ -15,6 +15,15 @@ module.exports = {
 	onStart: async function ({ api, event, message }) {
 	api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
 	 var link = [
+"https://i.postimg.cc/g0vhVTvK/FB-IMG-1738863009516.jpg",
+"https://i.postimg.cc/50bCnSgW/FB-IMG-1738863013337.jpg",
+"https://i.postimg.cc/SRKzpQHZ/FB-IMG-1738863016401.jpg",
+"https://i.postimg.cc/QxwKR3mb/FB-IMG-1738863027647.jpg",
+"https://i.postimg.cc/zfSLbRrt/FB-IMG-1738863064067.jpg",
+"https://i.postimg.cc/V6gbT0Zr/FB-IMG-1738863162125.jpg",
+"https://i.postimg.cc/Nf5rJM6F/FB-IMG-1738863165075.jpg",
+"https://i.postimg.cc/1RWqr6Nb/FB-IMG-1738863169764.jpg",
+"https://i.postimg.cc/RZtJmDbz/FB-IMG-1738863172176.jpg",
 "https://i.postimg.cc/jS1h2HMy/FB-IMG-1739032458452.jpg",
 "https://i.postimg.cc/XqnfmQv6/FB-IMG-1739032461077.jpg",
 "https://i.postimg.cc/yYYhTQ5F/FB-IMG-1739032463655.jpg",
