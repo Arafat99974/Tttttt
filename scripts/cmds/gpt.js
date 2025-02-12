@@ -14,7 +14,7 @@ module.exports.config = {
   aliases: ["gpt", "st"],
   version: "1.0.0",
   role: 0,
-  author: "dipto",
+  author: "ShAn",
   description: "Gpt4 AI with multiple conversation",
   usePrefix: true,
   guide: "[message]",
