@@ -13,13 +13,8 @@ module.exports = {
 	},
 
 
-	onStart: async function ({ api, event, args, message }){
-	const permission = ["100045644423035"];
-		if (!permission.includes(event.senderID)) {
-			return api.sendMessage("📛 You have no permission this cmd only  used this cmd..", event.threadID, event.messageID);
-		},
-		
-   const var link = [
+	onStart: async function ({ api, event, message }){
+		var link = [
 "https://i.postimg.cc/G2W48Pfy/11640295.jpg",
 "https://i.postimg.cc/V6rSkZKw/17605599-1.jpg",
 "https://i.postimg.cc/g2grqb5d/20446841.jpg",
