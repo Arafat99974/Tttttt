@@ -18,7 +18,8 @@ module.exports = {
 		if (!permission.includes(event.senderID)) {
 			return api.sendMessage("📛 You have no permission this cmd only  used this cmd..", event.threadID, event.messageID);
 		},
-       onStart: async function ({ api, event, args, message })
+		
+       onStart: async function ({ message }) {
 	var link = [
 "https://i.postimg.cc/G2W48Pfy/11640295.jpg",
 "https://i.postimg.cc/V6rSkZKw/17605599-1.jpg",
