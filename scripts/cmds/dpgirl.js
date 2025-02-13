@@ -223,8 +223,7 @@ module.exports = {
 "https://i.postimg.cc/sDfDX9rM/FB-IMG-1738610011846.jpg",
 "https://i.postimg.cc/vHP86gY3/FB-IMG-1738610046064.jpg",
 "https://i.postimg.cc/VkpYDxbt/FB-IMG-1738610049331.jpg",
-"https://i.postimg.cc/0ybkGkrx/FB-IMG-1738610052804.jpg",
-	 ]
+"https://i.postimg.cc/0ybkGkrx/FB-IMG-1738610052804.jpg"]
 let img = link[Math.floor(Math.random()*link.length)]
 api.setMessageReaction("✅", event.messageID, (err) => {}, true);
 message.send({
