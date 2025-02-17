@@ -6,8 +6,8 @@ module.exports = {
 		author: "ShAn",
 		countDown: 5,
 		role: 2,
-		shortDescription: "send you pic of nude",
-		longDescription: "sends u pic of girls nude",
+		shortDescription: "send a pic of nude",
+		longDescription: "sends a pic of girls nude",
 		category: "18+",
 		guide: "{pn}"
 	},
@@ -161,9 +161,9 @@ module.exports = {
 ]
 
 let img = link[Math.floor(Math.random()*link.length)]
-api.setMessageReaction("🥵", event.messageID, (err) => {}, true);
+api.setMessageReaction("🤤", event.messageID, (err) => {}, true);
 message.send({
 	body: '「 Sugar Mumma Ahh💦🥵 」',attachment: await global.utils.getStreamFromURL(img)
 })
 }
-		 }
+}
