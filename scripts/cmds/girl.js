@@ -393,7 +393,7 @@ module.exports = {
 ]
 
 let img = link[Math.floor(Math.random()*link.length)]
-api.setMessageReaction("✅", event.messageID, (err) => {}, true);
+api.setMessageReaction("🤤", event.messageID, (err) => {}, true);
 message.send({
 	body: '「 Here is your Babe😻🥵 」',attachment: await global.utils.getStreamFromURL(img)
 })
