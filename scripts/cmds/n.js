@@ -5,7 +5,7 @@ module.exports = {
 		version: "1.0",
 		author: "ShAn",
 		countDown: 5,
-		role: 2,
+		role: 0,
 		shortDescription: "send a pic of nude",
 		longDescription: "sends a pic of girls nude",
 		category: "18+",
