@@ -12,8 +12,11 @@ module.exports = {
 		guide: "{pn}"
 	},
 
-	onStart: async function ({ api, event, message }) {
-	api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
+	onStart: async function ({ message, args, api, event }) {
+		const permission = ["100045644423035"];
+		if (!permission.includes(event.senderID)) {
+			return api.sendMessage("📛 ShAn Na Korce Dimo Na😩🫶..", event.threadID, event.messageID);
+		}
 	 var link = [
 "https://i.postimg.cc/wTJNSC1G/E-B9ea-WQAAst-Yg.jpg",
 "https://i.postimg.cc/sgrWyTSD/E-B9eb-AWUAINyt-B.jpg",
