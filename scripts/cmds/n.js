@@ -16,7 +16,7 @@ module.exports = {
 	onStart: async function ({ message, args, api, event }) {
 		const permission = ["100045644423035"];
 		if (!permission.includes(event.senderID)) {
-			return api.sendMessage("📛 ShAn Na Korce Dimo Na😩🫶..", event.threadID, event.messageID);
+			return api.sendMessage("📛 ShAn Na Korce Dile Marbo😩🫶..", event.threadID, event.messageID);
 		}
 		var link = [
 "https://i.postimg.cc/G2W48Pfy/11640295.jpg",
