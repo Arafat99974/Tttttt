@@ -5,12 +5,12 @@ module.exports = {
 	config: {
 		name: "gay",
 		version: "1.0",
-		author: "@tas33n",
+		author: "𝗦𝗵𝗔𝗻",
 		countDown: 1,
 		role: 0,
 		shortDescription: "find gay",
 		longDescription: "",
-		category: "box chat",
+		category: "𝗕𝗢𝗫 𝗖𝗛𝗔𝗧",
 		guide: "{pn} {{[on | off]}}",
 		envConfig: {
 			deltaNext: 5
