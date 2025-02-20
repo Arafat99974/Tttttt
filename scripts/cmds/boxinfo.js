@@ -6,12 +6,12 @@ config: {
     name: "boxinfo",
     aliases: ['boxinfo'],
     version: "1.0",
-    author: "xemon",
+    author: "𝗦𝗵𝗔𝗻",
     countDown: 5,
     role: 0,
     shortDescription: "See Box info",
     longDescription: "",
-    category: "box chat",
+    category: "𝗕𝗢𝗫 𝗖𝗛𝗔𝗧",
     guide: {
       en: "{p} [groupinfo|boxinfo]",
     }
