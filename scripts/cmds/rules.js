@@ -4,14 +4,14 @@ module.exports = {
 	config: {
 		name: "rules",
 		version: "1.6",
-		author: "NTKhang",
+		author: "𝗦𝗵𝗔𝗻",
 		countDown: 5,
 		role: 1,
 		description: {
 			vi: "Tạo/xem/thêm/sửa/đổi vị trí/xóa nội quy nhóm của bạn",
 			en: "Create/view/add/edit/change position/delete group rules of you"
 		},
-		category: "box chat",
+		category: "𝗕𝗢𝗫 𝗠𝗔𝗡𝗔𝗚𝗘𝗠𝗘𝗡𝗧",
 		guide: {
 			vi: "   {pn} [add | -a] <nội quy muốn thêm>: thêm nội quy cho nhóm."
 				+ "\n   {pn}: xem nội quy của nhóm."
