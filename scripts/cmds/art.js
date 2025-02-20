@@ -6,13 +6,13 @@ module.exports = {
 	config: {
 		name: "art",
 		version: "1.1",
-		author: "NTKhang",
+		author: "𝗦𝗵𝗔𝗻",
 		countDown: 7,
 		role: 0,
     shortDescription: "AI Anime art",
     longDescription : "Archives will send you Image to Anime art Using Artificial Intelligence ",
     
-		category: "box chat",
+		category: "𝗕𝗢𝗫 𝗖𝗛𝗔𝗧",
     guide:{
       en:"{pn} |{pn} 2 |{pn} 3"
     }
