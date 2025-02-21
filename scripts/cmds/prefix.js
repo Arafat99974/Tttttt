@@ -38,7 +38,7 @@ module.exports = {
 			successThisThread: "Đã thay đổi prefix trong nhóm chat của bạn thành: %1",
 			myPrefix: "🦋𝘼𝙎𝙎𝘼𝙇𝘼𝙈𝙐𝘼𝙇𝘼𝙄𝙆𝙐𝙈✨"
 				+ "\n                       "
-				+ "\n 𝙃𝙚𝙡𝙡𝙤 𝙢𝙮 𝙣𝙖𝙢𝙚 𝙞𝙨 ♡𝕮𝖍𝖔𝖈𝖔𝖑𝖆𝖙𝖊 𝕼𝖚𝖊𝖊𝖓♡"
+				+ "\n 𝙃𝙚𝙡𝙡𝙤 𝙢𝙮 𝙣𝙖𝙢𝙚 𝙞𝙨 ❀ėฬ𝔯 𝖋á𝒊ⲍ𐍈❀"
 				+ "\n 𝙃𝙚𝙧𝙚 𝙞𝙨 𝙢𝙮 ❇️ 𝙋𝙍𝙀𝙁𝙄𝙓 ❇️"
 				+ "\n                         "
 				+ "\n ~🌀 𝙎𝙔𝙎𝙏𝙀𝙈 𝙋𝙍𝙀𝙁𝙄𝙓: %1"
@@ -56,7 +56,7 @@ module.exports = {
 			successThisThread: "♻️| Changed prefix in your box chat to: %1",
 			myPrefix: "🦋𝘼𝙎𝙎𝘼𝙇𝘼𝙈𝙐𝘼𝙇𝘼𝙄𝙆𝙐𝙈✨"
 				+ "\n                       "
-				+ "\n 𝙃𝙚𝙡𝙡𝙤 𝙢𝙮 𝙣𝙖𝙢𝙚 𝙞𝙨 ♡𝕮𝖍𝖔𝖈𝖔𝖑𝖆𝖙𝖊 𝕼𝖚𝖊𝖊𝖓♡"
+				+ "\n 𝙃𝙚𝙡𝙡𝙤 𝙢𝙮 𝙣𝙖𝙢𝙚 𝙞𝙨 ❀ėฬ𝔯 𝖋á𝒊ⲍ𐍈❀"
 				+ "\n 𝙃𝙚𝙧𝙚 𝙞𝙨 𝙢𝙮 ❇️ 𝙋𝙍𝙀𝙁𝙄𝙓 ❇️"
 				+ "\n                         "
 				+ "\n ~🌀 𝙎𝙔𝙎𝙏𝙀𝙈 𝙋𝙍𝙀𝙁𝙄𝙓: %1"
