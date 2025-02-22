@@ -5,7 +5,7 @@ module.exports = {
 		name: "say3",
 		aliases: ["sbn"],
 		version: "1.0",
-		author: "Siam the frog>🐸",
+		author: "ShAn",
 		countDown: 5,
 		role: 0,
 		shortDescription: "Say something Bangla will say it clearly",
