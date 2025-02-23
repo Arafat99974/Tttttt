@@ -25,23 +25,23 @@ module.exports.onStart = ({}) => {};
 const platforms = {
   TikTok: {
     regex: /(?:https?:\/\/)?(?:www\.)?tiktok\.com/,
-    endpoint: "/shan/tikDL?url=",
+    endpoint: "/nazrul/tikDL?url=",
   },
   Facebook: {
     regex: /(?:https?:\/\/)?(?:www\.)?(facebook\.com|fb\.watch|facebook\.com\/share\/v)/,
-    endpoint: "/shan/fbDL?url=",
+    endpoint: "/nazrul/fbDL?url=",
   },
   YouTube: {
     regex: /(?:https?:\/\/)?(?:www\.)?(youtube\.com|youtu\.be)/,
-    endpoint: "/shan/ytDL?url=",
+    endpoint: "/nazrul/ytDL?url=",
   },
   Twitter: {
     regex: /(?:https?:\/\/)?(?:www\.)?twitter\.com/,
-    endpoint: "/shan/alldl?url=",
+    endpoint: "/nazrul/alldl?url=",
   },
   Instagram: {
     regex: /(?:https?:\/\/)?(?:www\.)?instagram\.com/,
-    endpoint: "/shan/instaDL?url=",
+    endpoint: "/nazrul/instaDL?url=",
   },
 };
 
