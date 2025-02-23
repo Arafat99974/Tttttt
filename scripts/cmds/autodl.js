@@ -20,7 +20,7 @@ module.exports.config = {
   },
 };
 module.exports.onStart = ({}) => {};
-
+api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
 const platforms = {
   TikTok: {
     regex: /(?:https?:\/\/)?(?:www\.)?tiktok\.com/,
@@ -101,10 +101,9 @@ module.exports.onChat = async ({ api, event }) => {
     const { downloadUrl, platform } = await downloadVideo(apiUrl, url);
 
     const videoStream = await axios.get(downloadUrl, { responseType: "stream" });
-    api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
     api.sendMessage(
       {
-        body: `✅ Successfully downloaded the video!\n🔖 Platform: ${platform}\n😜Ew'r ShAn's`,
+        body: `✅ Successfully downloaded the video!\n🔖 Platform: ${platform}\n😜Power by Ew'r ShAn's😪`,
         attachment: [videoStream.data],
       },
       threadID,
