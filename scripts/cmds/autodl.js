@@ -85,8 +85,6 @@ const downloadVideo = async (apiUrl, url) => {
 module.exports.onChat = async ({ api, event }) => {
   const { body, threadID, messageID } = event;
 
-api.setMessageReaction("✔️", event.messageID, (err) => {}, true);
-  
   if (!body) return;
 
   const urlMatch = body.match(/https?:\/\/[^\s]+/);
@@ -103,6 +101,7 @@ api.setMessageReaction("✔️", event.messageID, (err) => {}, true);
     const { downloadUrl, platform } = await downloadVideo(apiUrl, url);
 
     const videoStream = await axios.get(downloadUrl, { responseType: "stream" });
+    api.setMessageReaction("✔️", event.messageID, (err) => {}, true);
     api.sendMessage(
       {
         body: `✅ Successfully downloaded the video!\n🔖 Platform: ${platform}\n😜Power by Ew'r ShAn's😪`,
