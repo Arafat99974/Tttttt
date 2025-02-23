@@ -1,11 +1,11 @@
 module.exports = {
   config: {
     name: "spam",
-    aurthor:"kim/zed",// Convert By Goatbot Zed
+    aurthor:"𝗦𝗵𝗔𝗻",
      role: 2,
     shortDescription: " ",
     longDescription: "",
-    category: "sophia",
+    category: "𝗙𝗨𝗡",
     guide: "{pn}"
   },
 
