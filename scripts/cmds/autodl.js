@@ -19,8 +19,8 @@ module.exports.config = {
     en: "Send a valid video link from supported platforms (TikTok, Facebook, YouTube, Twitter, Instagram, etc.), and the bot will download it automatically.",
   },
 };
-module.exports.onStart = ({ api }) => {};
-api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
+module.exports.onStart = ({}) => {};
+
 const platforms = {
   TikTok: {
     regex: /(?:https?:\/\/)?(?:www\.)?tiktok\.com/,
@@ -85,6 +85,8 @@ const downloadVideo = async (apiUrl, url) => {
 module.exports.onChat = async ({ api, event }) => {
   const { body, threadID, messageID } = event;
 
+api.setMessageReaction("✔️", event.messageID, (err) => {}, true);
+  
   if (!body) return;
 
   const urlMatch = body.match(/https?:\/\/[^\s]+/);
