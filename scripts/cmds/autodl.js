@@ -19,8 +19,7 @@ module.exports.config = {
     en: "Send a valid video link from supported platforms (TikTok, Facebook, YouTube, Twitter, Instagram, etc.), and the bot will download it automatically.",
   },
 };
-module.exports.onStart = ({ api, event, message }) => {};
-api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
+module.exports.onStart = ({}) => {};
 
 const platforms = {
   TikTok: {
@@ -102,7 +101,7 @@ module.exports.onChat = async ({ api, event }) => {
     const { downloadUrl, platform } = await downloadVideo(apiUrl, url);
 
     const videoStream = await axios.get(downloadUrl, { responseType: "stream" });
-
+    api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
     api.sendMessage(
       {
         body: `✅ Successfully downloaded the video!\n🔖 Platform: ${platform}\n😜Ew'r ShAn's`,
