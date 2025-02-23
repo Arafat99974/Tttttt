@@ -42,6 +42,9 @@ const platforms = {
   Instagram: {
     regex: /(?:https?:\/\/)?(?:www\.)?instagram\.com/,
     endpoint: "/nazrul/instaDL?url=",
+  Threads: {
+    regex: /(?:https?:\/\/)?(?:www\.)?threads\.com/,
+    endpoint: "/nazrul/instaDL?url=",
   },
 };
 
