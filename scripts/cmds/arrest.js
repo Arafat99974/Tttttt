@@ -7,12 +7,12 @@ module.exports = {
 		name: "arrest",
 		aliases: ["ar"],
 		version: "1.0",
-		author: "milan-says",
+		author: "𝗦𝗵𝗔𝗻",
 		countDown: 5,
 		role: 0,
 		shortDescription: "arret the rapist",
 		longDescription: "",
-		category: "image",
+		category: "𝗙𝗨𝗡",
 		guide:  {
 			vi: "{pn} [@tag]",
 			en: "{pn} [@tag]"
