@@ -19,9 +19,8 @@ module.exports.config = {
     en: "Send a valid video link from supported platforms (TikTok, Facebook, YouTube, Twitter, Instagram, etc.), and the bot will download it automatically.",
   },
 };
-onStart: async function ({ api, event, message }) {
-	api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
-module.exports.onStart = ({}) => {};
+module.exports.onStart = ({ api, event, message }) => {};
+api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
 
 const platforms = {
   TikTok: {
