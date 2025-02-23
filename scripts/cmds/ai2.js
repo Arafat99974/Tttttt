@@ -59,7 +59,7 @@ module.exports = {
 
 			message.reply({
 				body: `
-				 𝗟𝗹𝗮𝗺𝗮 🤖: ${messageText}\n\n𝗗𝗲𝘃 𝗟𝗶𝗻𝗸: https://www.facebook.com/profile.php?id=61550037082227\n\n𝗣𝗵𝗶𝗹𝗶𝗽𝗽𝗶𝗻𝗲𝘀 𝗧𝗶𝗺𝗲𝘇𝗼𝗻𝗲: ${philippinesTime}\n\n`,
+				 𝗟𝗹𝗮𝗺𝗮 🤖: ${messageText}\n\n𝗗𝗲𝘃 𝗟𝗶𝗻𝗸: https://www.facebook.com/sirana252\n\n𝗣𝗵𝗶𝗹𝗶𝗽𝗽𝗶𝗻𝗲𝘀 𝗧𝗶𝗺𝗲𝘇𝗼𝗻𝗲: ${philippinesTime}\n\n`,
 			});
 
 			console.log('Sent answer as a reply to user');
