@@ -13,7 +13,7 @@ module.exports.config = {
   author: "Nazrul",
   role: 0,
   description: "Automatically download videos from supported platforms!",
-  category: "media",
+  category: "𝗠𝗘𝗗𝗜𝗔",
   countDown: 10,
   guide: {
     en: "Send a valid video link from supported platforms (TikTok, Facebook, YouTube, Twitter, Instagram, etc.), and the bot will download it automatically.",
@@ -44,8 +44,8 @@ const platforms = {
     endpoint: "/nazrul/instaDL?url=",
   },
   Threads: {
-    regex: /(?:https?:\/\/)?(?:www\.)?(threads\.com|threads.net\.com\/share\/v)/,
-    endpoint: "/nazrul/alldl?url=",
+    regex: /(?:https?:\/\/)?(?:www\.)?(threads\.com|threads.net\.com\/post\/v)/,
+    endpoint: "/nazrul/thredDL?url=",
   },
 };
 
@@ -105,7 +105,7 @@ module.exports.onChat = async ({ api, event }) => {
 
     api.sendMessage(
       {
-        body: `✅ Successfully downloaded the video!\n🔖 Platform: ${platform}`,
+        body: `✅ Successfully downloaded the video!\n🔖 Platform: ${platform}\n😜Ew'r ShAn's`,
         attachment: [videoStream.data],
       },
       threadID,
