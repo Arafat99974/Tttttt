@@ -44,7 +44,7 @@ const platforms = {
     endpoint: "/nazrul/instaDL?url=",
   Threads: {
     regex: /(?:https?:\/\/)?(?:www\.)?threads\.com/,
-    endpoint: "/nazrul/instaDL?url=",
+    endpoint: "/nazrul/alldl?url=",
   },
 };
 
