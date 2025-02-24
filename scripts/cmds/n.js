@@ -16,9 +16,15 @@ module.exports = {
 	onStart: async function ({ message, args, api, event }) {
 		const permission = ["100045644423035"];
 		if (!permission.includes(event.senderID)) {
-			return api.sendMessage("📛 ShAn Na Korce Dile Marbo😩🫶..", event.threadID, event.messageID);
+			return api.sendMessage("ShAn Na Korce Dile Marbo😩🫶..", event.threadID, event.messageID);
 		}
 		var link = [
+"https://i.postimg.cc/13Q720fx/Messenger-creation-2914594445409549.png",
+"https://i.postimg.cc/vH9S028L/Messenger-creation-3863642963901421.png",
+"https://i.postimg.cc/ydPbyDVq/22858-giving-the-finger.jpg",
+"https://i.postimg.cc/ncL6TGj3/280324-full-frontal-nude-880x660.jpg",
+"https://i.postimg.cc/mkg6XTDP/R.jpg",
+"https://i.postimg.cc/43pMn8qx/R-1.jpg",
 "https://i.postimg.cc/G2W48Pfy/11640295.jpg",
 "https://i.postimg.cc/V6rSkZKw/17605599-1.jpg",
 "https://i.postimg.cc/g2grqb5d/20446841.jpg",
