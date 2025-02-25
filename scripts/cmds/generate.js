@@ -4,10 +4,10 @@ module.exports = {
                                 aliases:["gen"],
 				version: "1.0.0",
 				role: 0,
-				author: "deku",
+				author: "𝗦𝗵𝗔𝗻",
 				shortDescription: "Generate image",
 				countDown: 0,
-				category: "image",
+				category: "𝗜𝗠𝗔𝗚𝗘",
 				guide: {
 						en: '{p}gen [prompt]'
 				}
