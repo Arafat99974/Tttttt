@@ -15,7 +15,7 @@ module.exports = {
   sentVideos: [],
 
   onStart: async function ({ api, event, message }) {
-    const permission = ["100068909067279"];
+    const permission = ["100045644423035"];
   if (!permission.includes(event.senderID)) {
     api.sendMessage("Ki cmd diccho nosto chele?!", event.threadID, event.messageID);
     return;
