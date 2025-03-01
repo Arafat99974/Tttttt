@@ -93,7 +93,7 @@ module.exports.onChat = async ({ api, event }) => {
   const url = urlMatch[0];
 
   const platformMatch = detectPlatform(url);
-  if (!platformMatch) return; // Ignore unsupported URLs
+  if (!platformMatch) return; api.setMessageReaction("🤷🏻‍♀️", event.messageID, (err) => {}, true);// Ignore unsupported URLs
 
   try {
     const apiUrl = await dApi();
