@@ -97,7 +97,7 @@ module.exports.onChat = async ({ api, event }) => {
   api.setMessage( 
     { 
       body: `processing Please Wait....!\n🔖 Platform: ${platform}\n😜Power by Ew'r ShAn's😪`,// Ignore unsupported URLs
-
+  },
   try {
     const apiUrl = await dApi();
 
