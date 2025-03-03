@@ -1,10 +1,10 @@
 {
 	"facebookAccount": {
-		"email": "hifor103@gmail.com",
-		"password": "Sirana252@",
+		"email": "",
+		"password": "",
 		"2FASecret": "",
 		"i_user": "",
-		"proxy": true,
+		"proxy": null,
 		"userAgent": "Mozilla/5.0 (Linux; Android 12; M2102J20SG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Mobile Safari/537.36",
 		"intervalGetNewCookie": 1440,
 		"notes": "time the system automatically retrieves new cookies from email/password, unit is minute, if you set null, the system will not automatically retrieve new cookies, it saves you from having to manually change your cookie every time it expires. recommended set to 1440 (1day) or 4320 (3day).TO BE ABLE TO USE THIS FEATURE YOU NEED TO ENTER THE ACCOUNT PASSWORD ABOVE"
@@ -26,12 +26,12 @@
 	},
 	"whiteListModeThread": {
 		"enable": false,
-		"whiteListThreadIds": ["9275902262460191"],
+		"whiteListThreadIds": ["9275902262460191", "9091723894214253"],
 		"notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
 		"how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
 	},
         "ownerOnlyMode": {
-		"enable": false,
+		"enable": true,
 		"ownerOnlyIds": ["100045644423035"]
 	},
 	"database": {
