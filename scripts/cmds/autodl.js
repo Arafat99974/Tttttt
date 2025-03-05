@@ -89,16 +89,14 @@ module.exports.onChat = async ({ api, event }) => {
 
   const urlMatch = body.match(/https?:\/\/[^\s]+/);
   if (!urlMatch) return;
-  api.setMessageReaction("✔️", event.messageID, (err) => {}, true);
+  api.setMessageReaction("🤷🏻‍♂️", event.messageID, (err) => {}, true);
   const url = urlMatch[0];
 
   const platformMatch = detectPlatform(url);
-  if (!platformMatch) return;
-  api.messagereply({ body: `processing Please Wait....!\n🔖 Platform: ${platform}\n😜Power by Ew'r ShAn's😪`,
-  });// Ignore unsupported URLs
+  if (!platformMatch) return;// Ignore unsupported URLs
   try {
     const apiUrl = await dApi();
-
+    api.setMessageReaction("✔️", event.messageID, (err) => {}, true);
     const { downloadUrl, platform } = await downloadVideo(apiUrl, url);
 
     const videoStream = await axios.get(downloadUrl, { responseType: "stream" });
