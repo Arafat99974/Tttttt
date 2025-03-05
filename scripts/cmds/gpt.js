@@ -1,10 +1,27 @@
+require("dotenv").config();
 const axios = require("axios");
 
-async function baseUrl() {
-  try {
-    const base = await axios.get('https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json');
-    return base.data.api;
-  } catch (error) {
+const apiKey = process.env.OPENAI_API_KEY;
+
+async function getChatGPTResponse(prompt) {
+    try {
+        const response = await axios.post(
+            "https://api.openai.com/v1/chat/completions",
+            {
+                model: "gpt-3.5-turbo",
+                messages: [{ role: "user", content: prompt }],
+                max_tokens: 100
+            },
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${apiKey}`
+                }
+            }
+        );
+
+        console.log("ChatGPT:", response.data.choices[0].message.content);
+    } catch (error) {
     throw new Error('Failed to fetch base API URL');
   }
 }
@@ -18,7 +35,7 @@ module.exports.config = {
   description: "Gpt4 AI with multiple conversation",
   usePrefix: true,
   guide: "[message]",
-  category: "AI",
+  category: "𝗔𝗜",
   countDown: 5,
 };
 
