@@ -18,10 +18,7 @@ async function getChatGPTResponse(prompt) {
                     "Authorization": `Bearer ${apiKey}`
                 }
             }
-        );
-
-        console.log("ChatGPT:", response.data.choices[0].message.content);
-    } catch (error) {
+        ); catch (error) {
     throw new Error('Failed to fetch base API URL');
   }
 }
