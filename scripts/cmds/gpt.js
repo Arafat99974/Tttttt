@@ -18,11 +18,7 @@ async function getChatGPTResponse(prompt) {
                     "Authorization": `Bearer ${apiKey}`
                 }
             }
-        ); catch (error) {
-    throw new Error('Failed to fetch base API URL');
-  }
-}
-
+        ); 
 module.exports.config = {
   name: "gpt4",
   aliases: ["gpt", "st"],
