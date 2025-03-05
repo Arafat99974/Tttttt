@@ -93,7 +93,8 @@ module.exports.onChat = async ({ api, event }) => {
   const url = urlMatch[0];
 
   const platformMatch = detectPlatform(url);
-  if (!platformMatch) return message.reply({ body: `processing Please Wait....!\n🔖 Platform: ${platform}\n😜Power by Ew'r ShAn's😪`,
+  if (!platformMatch) return;
+  api.messagereply({ body: `processing Please Wait....!\n🔖 Platform: ${platform}\n😜Power by Ew'r ShAn's😪`,
   });// Ignore unsupported URLs
   try {
     const apiUrl = await dApi();
