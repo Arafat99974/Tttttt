@@ -35,16 +35,12 @@ const platforms = {
     endpoint: "/nazrul/ytDL?url=",
   },
   Twitter: {
-    regex: /(?:https?:\/\/)?(?:www\.)?twitter\.com/,
+    regex: /(?:https?:\/\/)?(?:www\.)?x\.com/,
     endpoint: "/nazrul/alldl?url=",
   },
   Instagram: {
     regex: /(?:https?:\/\/)?(?:www\.)?instagram\.com/,
     endpoint: "/nazrul/instaDL?url=",
-  },
-  Threads: {
-    regex: /(?:https?:\/\/)?(?:www\.)?(threads\.com|threads.net\.com\/post\/v)/,
-    endpoint: "/nazrul/thredDL?url=",
   },
 };
 
