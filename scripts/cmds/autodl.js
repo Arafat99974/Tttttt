@@ -42,6 +42,10 @@ const platforms = {
     regex: /(?:https?:\/\/)?(?:www\.)?instagram\.com/,
     endpoint: "/nazrul/instaDL?url=",
   },
+  Threads: {
+    regex: /(?:https?:\/\/)?(?:www\.)?threads\.net/,
+    endpoint: "/nazrul/alldl?url=",
+  },
 };
 
 const detectPlatform = (url) => {
