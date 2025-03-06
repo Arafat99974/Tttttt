@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const apiKey = process.env.OPENAI_API_KEY;
+const apiKey = "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";
 const openaiUrl = "https://api.openai.com/v1/chat/completions";
 
 app.post("/chat", async (req, res) => {
