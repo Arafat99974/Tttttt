@@ -153,7 +153,7 @@ const editMessage = async (api, threadID, messageID, senderID, input) => {
 
 module.exports.config = {
   name: "bby",
-  aliases: ["baby","bbu"],
+  aliases: ["baby","bbu", "hi", "shan"],
   version: "1.6.9",
   author: "Nazrul",
   role: 0,
