@@ -134,4 +134,110 @@ const editMessage = async (api, threadID, messageID, senderID, input) => {
         `${apiBase}/bby/edit?ask=${encodeURIComponent(ask)}&index=${index}&newAns=${encodeURIComponent(newAns)}&uid=${senderID}`
       );
 
-      return sendM
+      return sendMessage(api, threadID, res.data?.status === "Success"
+        ? `✅ Successfully updated answer at index ${index} to: ${newAns}`
+        : res.data?.message || "❌ Failed to update the answer!", messageID);
+    } else {
+      const res = await axios.get(
+        `${apiBase}/bby/edit?ask=${encodeURIComponent(ask)}&newAsk=${encodeURIComponent(newAskOrIndex)}&uid=${senderID}`
+      );
+
+      return sendMessage(api, threadID, res.data?.status === "Success"
+        ? `✅ Successfully updated question to: ${newAskOrIndex}`
+        : res.data?.message || "❌ Failed to update the question!", messageID);
+    }
+  } catch {
+    return cError(api, threadID, messageID);
+  }
+};
+
+module.exports.config = {
+  name: "bby",
+  aliases: ["baby","bbu"],
+  version: "1.6.9",
+  author: "Nazrul",
+  role: 0,
+  description: "Talk with the bot or teach it new responses",
+  category: "talk",
+  countDown: 3,
+  guide: {
+    en: `{pn} <text> - Ask the bot something\n{pn} teach <ask> - <answer> - Teach the bot a new response\n\nExamples:\n1. {pn} Hello\n2. {pn} teach hi - hello\n3. {pn} delete <text> - Delete all answers related to text\n4. {pn} delete <text> - <index> - Delete specific answer at index\n5. {pn} edit <Ask> - <New Ask> to update the ask query\n6. {pn} edit <ask> - <index> - <new ans> update specific answer at index`,
+  },
+};
+
+module.exports.onStart = async ({ api, event, args }) => {
+  const { threadID, messageID, senderID } = event;
+  if (args.length === 0) {
+    return sendMessage(api, threadID, "Please provide text or teach the bot!", messageID);
+  }
+
+  const input = args.join(" ").trim();
+  const [command, ...rest] = input.split(" ");
+
+  switch (command.toLowerCase()) {
+    case "teach":
+      return teachBot(api, threadID, messageID, senderID, rest.join(" ").trim());
+    case "msg":
+      return botMsgInfo(api, threadID, messageID, senderID, rest.join(" ").trim());
+    case "edit":
+      return editMessage(api, threadID, messageID, senderID, rest.join(" ").trim());
+    case "delete":
+    case "remove":
+      return deleteMessage(api, threadID, messageID, senderID, rest.join(" ").trim());
+    default:
+      return talkWithBot(api, threadID, messageID, senderID, input);
+  }
+};
+
+module.exports.onChat = async ({ api, event }) => {
+  const { threadID, messageID, body, senderID } = event;
+
+  const cMessages = ["🎀 Hello bby!", "🎀 Hi there!", "🎀 Hey! How can I help?"];
+  const userInput = body.toLowerCase().trim();
+
+  const keywords = ["bby", "baby", "bot", "বট", "robot"];
+
+  if (keywords.some((keyword) => userInput.startsWith(keyword))) {
+    const isQuestion = userInput.split(" ").length > 1;
+    if (isQuestion) {
+      const question = userInput.slice(userInput.indexOf(" ") + 1).trim();
+
+      try {
+        const res = await axios.get(
+          `${await getAPIBase()}/bby?text=${encodeURIComponent(question)}&uid=${senderID}&font=2`
+        );
+        const replyMsg = res.data?.text || "Please teach me this sentence!🦆💨";
+        const react = res.data.react || "";
+
+        return api.sendMessage(replyMsg + react, threadID, (error, info) => {
+          if (!error) {
+            global.GoatBot.onReply.set(info.messageID, {
+              commandName: module.exports.config.name,
+              type: "reply",
+              author: senderID,
+              replyMsg
+            });
+          }
+        }, messageID);
+      } catch (error) {
+        return api.sendMessage("error🦆💨", threadID, messageID);
+      }
+    } else {
+      const rMsg = cMessages[Math.floor(Math.random() * cMessages.length)];
+      return api.sendMessage(rMsg, threadID, (error, info) => {
+          if (!error) {
+            global.GoatBot.onReply.set(info.messageID, {
+              commandName: module.exports.config.name,
+              type: "reply",
+              author: senderID,
+            });
+          }
+        }, messageID);
+    }
+  }
+};
+
+module.exports.onReply = async ({ api, event, Reply }) => {
+  const { threadID, messageID, senderID, body } = event;
+  return talkWithBot(api, threadID, messageID, senderID, body);
+};
