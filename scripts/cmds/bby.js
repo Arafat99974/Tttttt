@@ -153,7 +153,7 @@ const editMessage = async (api, threadID, messageID, senderID, input) => {
 
 module.exports.config = {
   name: "bby",
-  aliases: ["baby","bbu", "hi", "shan"],
+  aliases: ["baby","bbu", "faiza", "shan"],
   version: "1.6.9",
   author: "Nazrul",
   role: 0,
@@ -195,7 +195,7 @@ module.exports.onChat = async ({ api, event }) => {
   const cMessages = ["🎀 Hello bby!", "🎀 Hi there!", "🎀 Hey! How can I help?"];
   const userInput = body.toLowerCase().trim();
 
-  const keywords = ["bby", "shan", "hii", "baby", "bot", "বট", "robot"];
+  const keywords = ["bby", "shan", " faiza", "hii", "baby", "bot", "বট", "robot"];
 
   if (keywords.some((keyword) => userInput.startsWith(keyword))) {
     const isQuestion = userInput.split(" ").length > 1;
