@@ -1,15 +1,15 @@
 module.exports = {
   config: {
-    name: "slot",
+    name: "bet",
     version: "1.0",
-    author: "OtinXSandip",
+    author: "𝗦𝗵𝗔𝗻",
     shortDescription: {
-      en: "Slot game",
+      en: "bet game",
     },
     longDescription: {
-      en: "Slot game.",
+      en: "bet game.",
     },
-    category: "Game",
+    category: "𝗚𝗔𝗠𝗘",
   },
   langs: {
     en: {
