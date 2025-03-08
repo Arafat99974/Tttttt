@@ -5,7 +5,7 @@ module.exports = {
 		name: 'ai',
 		version: '1.0',
 		author: '𝗦𝗵𝗔𝗻',
-		role: 0,
+		role: 2,
 		category: '𝗔𝗜-𝗖𝗛𝗔𝗧',
 		shortDescription: {
 			en: `bes-ai`
