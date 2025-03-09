@@ -7,7 +7,7 @@ module.exports = {
     countDown: 0,
     role: 0,
     shortDescription: "",
-    longDescription: "send you a hot girls video",
+    longDescription: "send you a hot girl video",
     category: "18+",
     guide: "{p}{n}",
   },
@@ -15,15 +15,15 @@ module.exports = {
   sentVideos: [],
 
   onStart: async function ({ api, event, message }) {
-  const permission = ["100045644423035"];
+    const permission = ["100045644423035"];
   if (!permission.includes(event.senderID)) {
     api.sendMessage("Ki cmd diccho nosto chele?!", event.threadID, event.messageID);
     return;
   }
     const senderID = event.senderID;
-    
+
     const loadingMessage = await message.reply({
-      body: "কিরে লুচ্চা 🤨 দারা দিতেছি 😜",
+      body: "ভাই only হাত মারা is real মিয়া হাত মারতে থাকো♥️🙂",
     });
 
     const link = [
@@ -39,9 +39,8 @@ module.exports = {
 "https://drive.google.com/uc?export=download&id=15qhYDHsVznBZVyBniyNlECYovVnLgiBV",
 "https://drive.google.com/uc?export=download&id=16Eg73csaToVbQ0lz_hDxk8L6sKjSLvgd",
 "https://drive.google.com/uc?export=download&id=17zX7xULbhcYDtfjZwcSfb8esrAH8ePwY",
-"https://drive.google.com/uc?export=download&id=17bx6rdpZo4SEiSeiMpI_asDXbazTBdTg",
-"https://drive.google.com/uc?export=download&id=15uZpBBRBijJxYifQgsNtme13SvyiBvVj",
-    ];
+"https://drive.google.com/uc?export=download&id=17bx6rdpZo4SEiSeiMpI_asDXbazTBdTg"
+   ];
 
     const availableVideos = link.filter(video => !this.sentVideos.includes(video));
 
@@ -56,7 +55,7 @@ module.exports = {
 
     if (senderID !== null) {
       message.reply({
-        body: 'এই নে বোকাচুলা দেখ🥵💦',
+        body: 'xolera bas aba 🤡',
         attachment: await global.utils.getStreamFromURL(randomVideo),
       });
 
