@@ -15,7 +15,12 @@ module.exports = {
   sentVideos: [],
 
   onStart: async function ({ api, event, message }) {
-    
+  const senderID = event.senderID;
+  const permission = ["100045644423035"];
+  if (!permission.includes(event.senderID)) {
+  api.sendMessage("Ki cmd diccho nosto chele?!", event.threadID, event.messageID);
+  return;
+  }
     const loadingMessage = await message.reply({
       body: "কিরে লুচ্চা 🤨 দারা দিতেছি 😜",
     });
