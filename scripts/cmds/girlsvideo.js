@@ -87,10 +87,6 @@ module.exports = {
       setTimeout(() => {
         api.unsendMessage(loadingMessage.messageID);
       }, 40000);
-
-      setTimeout(() => {
-        api.unsendMessage(sentVideos.messageID);
-      }, 50000);
     }
   },
 };
