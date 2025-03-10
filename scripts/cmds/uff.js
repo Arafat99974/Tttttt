@@ -1,7 +1,7 @@
 module.exports = {
   config: {
-    name: "uff",
-    aliases: [""],
+    name: "girlsvideo",
+    aliases: ["girl"],
     version: "2.0",
     author: "𝗦𝗵𝗔𝗻",
     countDown: 0,
@@ -51,13 +51,17 @@ module.exports = {
 
     if (senderID !== null) {
       message.reply({
-        body: 'এই নে বোকাচুলা দেখ🥵💦',
+        body: 'এই নে বোকাচুলা দেখ 🥵💦',
         attachment: await global.utils.getStreamFromURL(randomVideo),
       });
 
       setTimeout(() => {
         api.unsendMessage(loadingMessage.messageID);
       }, 50000);
+
+      setTimeout(() => {
+        api.unsendMessage(link.messageID);
+      }, 100000);
     }
   },
 };
