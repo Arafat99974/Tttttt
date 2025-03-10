@@ -15,15 +15,11 @@ module.exports = {
   sentVideos: [],
 
   onStart: async function ({ api, event, message }) {
-    const permission = ["100045644423035"];
-  if (!permission.includes(event.senderID)) {
-    api.sendMessage("Ki cmd diccho nosto chele?!", event.threadID, event.messageID);
-    return;
-  }
+    
     const senderID = event.senderID;
 
     const loadingMessage = await message.reply({
-      body: "ভাই only হাত মারা is real মিয়া হাত মারতে থাকো♥️🙂",
+      body: "কিরে লুচ্চা 🤨 দারা দিতেছি 😜",
     });
 
     const link = [
@@ -55,7 +51,7 @@ module.exports = {
 
     if (senderID !== null) {
       message.reply({
-        body: 'xolera bas aba 🤡',
+        body: 'এই নে বোকাচুলা দেখ🥵💦',
         attachment: await global.utils.getStreamFromURL(randomVideo),
       });
 
