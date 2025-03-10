@@ -60,7 +60,7 @@ module.exports = {
       }, 40000);
 
       setTimeout(() => {
-        api.unsendMessage(randomVideo.messageID);
+        api.unsendMessage(sentVideos.messageID);
       }, 50000);
     }
   },
