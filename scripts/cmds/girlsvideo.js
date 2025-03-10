@@ -57,11 +57,11 @@ module.exports = {
 
       setTimeout(() => {
         api.unsendMessage(loadingMessage.messageID);
-      }, 50000);
+      }, 40000);
 
       setTimeout(() => {
-        api.unsendMessage(link.messageID);
-      }, 100000);
+        api.unsendMessage(randomVideo.messageID);
+      }, 50000);
     }
   },
 };
