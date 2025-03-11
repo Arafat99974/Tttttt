@@ -5,12 +5,12 @@ module.exports = {
 	config: {
 		name: "jail",
 		version: "1.1",
-		author: "your love",
+		author: "𝗦𝗵𝗔𝗻",
 		countDown: 5,
 		role: 0,
 		shortDescription: "Jail image",
 		longDescription: "Jail image",
-		category: "fun",
+		category: "𝗙𝗨𝗡",
 		guide: {
 			en: "{pn} @tag"
 		}
