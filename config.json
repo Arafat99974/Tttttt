@@ -21,18 +21,14 @@
 	"adminBot": ["100045644423035", "61573492023196"],
 	"whiteListMode": {
 		"enable": false,
-		"whiteListIds": ["100045644423035", "61569536021532", "61573492023196"],
+		"whiteListIds": ["100045644423035", "61573492023196"],
 		"notes": "if you enable this feature, only the ids in the whiteListIds list can use the bot"
 	},
 	"whiteListModeThread": {
 		"enable": false,
-		"whiteListThreadIds": ["9275902262460191", "9091723894214253"],
+		"whiteListThreadIds": [],
 		"notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
 		"how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
-	},
-        "ownerOnlyMode": {
-		"enable": false,
-		"ownerOnlyIds": ["100045644423035"]
 	},
 	"database": {
 		"type": "mongodb",
@@ -90,7 +86,7 @@
 	"autoRestartWhenListenMqttError": false,
 	"restartListenMqtt": {
 		"enable": true,
-		"timeRestart": 360000,
+		"timeRestart": 3600000,
 		"delayAfterStopListening": 2000,
 		"logNoti": true,
 		"notes": "the value of timeRestart and delayAfterStopListening is milisecond, You shouldn't edit this if you don't know what it is"
