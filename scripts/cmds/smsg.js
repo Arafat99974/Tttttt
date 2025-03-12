@@ -1,3 +1,21 @@
+module.exports = {
+  config: {
+    name: "smsg",
+    aliases: ["smile"],
+    version: "1.0.0",
+    author: "𝗦𝗵𝗔𝗻",
+    countDowns: 5,
+    role: 0,
+    shortDescription: {
+en: "Send a random wonderful message to make people smile"},
+    longDescription: {
+en: "Send a random wonderful message to make people smile"},
+    category: "𝗙𝗨𝗡",
+    guide: {
+      en: "{p}{n}",
+    },
+  },
+
 const wonderfulMessages = [
   "You radiate positivity and kindness.",
   "Your smile can light up even the darkest of days.",
@@ -85,7 +103,7 @@ const wonderfulMessages = [
   "You are a constant source of inspiration and positivity.",
   "Your laughter is a melody that brightens our days.",
   "You have a heart full of love and a spirit full of giving.",
-"You are a bright light in the lives of those around you.",
+  "You are a bright light in the lives of those around you.",
   "Your friendship is a treasure that enriches our lives.",
   "You have the power to make the world a better place.",
   "Your kindness is a gift that keeps on giving.",
@@ -185,24 +203,8 @@ const wonderfulMessages = [
   "Your resilience in the face of challenges is truly remarkable.",
   "You are a force of nature, and your impact is profound.",
   "Your empathy and compassion touch the hearts of many.",
-"You have a heart that knows no limits when it comes to giving.", "You make the world a brighter place with your presence.", "Your generosity of spirit is a rare and precious gift.", "You have an extraordinary ability to make others feel valued.", "You are a true gem in the lives of those you touch.", "Your optimism is a beacon of hope for us all.", "You have a heart as vast as the universe and as deep as the ocean.", "You bring sunshine into the lives of others.", "Your friendship is a cherished treasure.", "You have a remarkable ability to make people feel special.", "You are a role model for kindness and empathy.", "Your compassion knows no bounds.", "You are a constant source of inspiration and positivity.", "Your laughter is a melody that brightens our days.", "You have a heart full of love and a spirit full of giving.", ];
-
-
-module.exports = {
-  config: {
-    name: "smsg",
-    aliases: ["msg", "smile"],
-    version: "1.0.0",
-    role: 0,
-    author: "Blake Cyphrus",
-    longDescription: {
-en: "Send a random wonderful message to make people smile"},
-    shortDescription: {
-en: "Send a random wonderful message to make people smile"},
-    category: "general",
-    guide: ["smsg"],
-    countDowns: 5,
-  },
+"You have a heart that knows no limits when it comes to giving.", "You make the world a brighter place with your presence.", "Your generosity of spirit is a rare and precious gift.", "You have an extraordinary ability to make others feel valued.", "You are a true gem in the lives of those you touch.", "Your optimism is a beacon of hope for us all.", "You have a heart as vast as the universe and as deep as the ocean.", "You bring sunshine into the lives of others.", "Your friendship is a cherished treasure.", "You have a remarkable ability to make people feel special.", "You are a role model for kindness and empathy.", "Your compassion knows no bounds.", "You are a constant source of inspiration and positivity.", "Your laughter is a melody that brightens our days.", "You have a heart full of love and a spirit full of giving.", 
+];
 
 onStart : function({ api, event }) {
   // Get a random wonderful message from the array.
