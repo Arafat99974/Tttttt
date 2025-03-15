@@ -1,3 +1,7 @@
+const { loadImage, createCanvas } = require("canvas");
+const fs = require("fs-extra");
+const axios = require("axios");
+
 module.exports.config = {
   name: "hack",
   version: "1.0.0",
