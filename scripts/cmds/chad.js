@@ -8,12 +8,12 @@ module.exports = {
         name: "chad",
         aliases: ["chad"],
         version: "1.0",
-        author: "red wan",
+        author: "𝗦𝗵𝗔𝗻",
         countDown: 5,
         role: 0,
         shortDescription: "giga-chad-face",
         longDescription: "",
-        category: "image",
+        category: "𝗜𝗠𝗔𝗚𝗘",
         guide: {
 			vi: "{pn} [@tag",
 			en: "{pn} [@tag]"
