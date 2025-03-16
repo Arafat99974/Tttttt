@@ -1,14 +1,11 @@
 const config = {
         name: "tag",
         version: "1.6.9",
-        author: "Dipto",
-        credits: "Dipto",
+        author: "𝗦𝗵𝗔𝗻",
         countDown: 0,
         role: 0,
-        hasPermission: 0,
         description: "Tag user",
-        category: "tag",
-        commandCategory: "tag",
+        category: "𝗕𝗢𝗫 𝗠𝗔𝗡𝗔𝗚𝗘𝗠𝗘𝗡𝗧",
         guide: "{pn} [reply/mention]",
         usages: "reply or mention"
     };
