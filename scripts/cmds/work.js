@@ -3,7 +3,7 @@ module.exports = {
     name: "work",
     aliases: ["wo"], 
     version: "1.0",
-    author: "LiANE",
+    author: "𝗦𝗵𝗔𝗻",
     countDown: 60,
     role: 0,
     shortDescription: {
@@ -14,7 +14,7 @@ module.exports = {
       vi: "Thực hiện công việc và nhận tiền thưởng.",
       en: "Perform tasks and earn rewards."
     },
-    category: "economy", 
+    category: "𝗕𝗔𝗡𝗞", 
     guide: {
       vi: "   {pn} levelUp: balance reward: ?\n"
         + "   {pn} guessingGame: balance reward: ?\n"
