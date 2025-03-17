@@ -7,12 +7,12 @@ module.exports = {
         name: "us",
         aliases: ["us"],
         version: "1.0",
-        author: "sandy",
+        author: "𝗦𝗵𝗔𝗻",
         countDown: 5,
         role: 0,
         shortDescription: "we together",
         longDescription: "",
-        category: "love",
+        category: "𝗟𝗢𝗩𝗘",
         guide: {
 			vi: "{pn} [@tag]",
 			en: "{pn} [@tag]"
