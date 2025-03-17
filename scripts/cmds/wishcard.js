@@ -2,10 +2,10 @@ module.exports = {
   config: {
     name: "wishcard",
     aliases: ["wc"],
-    author: 'junjam × AceGun',
+    author: '𝗦𝗵𝗔𝗻',
     countDown: 5,
     role: 0,
-    category: "fun",
+    category: "𝗙𝗨𝗡",
     shortDescription: {
       en: 'Make a wishcard',
     },
