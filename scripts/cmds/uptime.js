@@ -3,7 +3,7 @@ module.exports = {
     name: "uptime",
     aliases:["up", "upt"],
     version: "1.7",
-    author: "Anas x 114",
+    author: "𝗦𝗵𝗔𝗻",
     role: 2,
     shortDescription: {
       en: "Get stylish bot stats and uptime!"
@@ -11,7 +11,7 @@ module.exports = {
     longDescription: {
       en: "Displays bot uptime, user, thread stats, and total messages processed in a modern and visually engaging style."
     },
-    category: "system",
+    category: "𝗜𝗡𝗙𝗢",
     guide: {
       en: "Use {p}uptime to display the bot's stats in style."
     }
@@ -39,7 +39,7 @@ module.exports = {
       // Stylish message design
       const message = `
 ┏━━━━━━━━━━━━━━━┓
-  ♡𝕮𝖍𝖔𝖈𝖔𝖑𝖆𝖙𝖊 𝕼𝖚𝖊𝖊𝖓♡
+     ❀ėฬ𝔯 𝖋á𝒊ⲍ𐍈❀
 ┗━━━━━━━━━━━━━━━┛
 📆 Uptime: ${uptimeString}
 🙋 Total Users: ${allUsers.length}
