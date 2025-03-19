@@ -2,14 +2,14 @@ const fs = require('fs');
 
 module.exports = {
   config: {
-    name: "TorD",
+    name: "tord",
     version: "1.0",
-    author: "SiAM",
+    author: "𝗦𝗵𝗔𝗻",
     countDown: 5,
     role: 0,
     shortDescription: "This command allows \n| users to play the Truth or Dare game.",
     longDescription: "This command enables users to play the classic Truth or Dare game. They can choose either 'Truth' or 'Dare' and receive a randomly selected question or challenge.",
-    category: "Games",
+    category: "𝗚𝗔𝗠𝗘",
     guide: {
       en: "To play the Truth or Dare game, use the command '{pn} truth' for a truth question or '{pn} dare' for a dare challenge."
     }
