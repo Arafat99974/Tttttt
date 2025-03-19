@@ -1,8 +1,8 @@
 const axios = require('axios');
 
 // config 
-const apiKey = "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";
-const maxTokens = 1000;
+const apiKey = "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";
+const maxTokens = 500;
 const numberGenerateImage = 4;
 const maxStorageMessage = 4;
 
@@ -16,19 +16,15 @@ const { openAIUsing, openAIHistory } = global.temp;
 module.exports = {
 	config: {
 		name: "gpt",
-		version: "1.2",
+		version: "1.4",
 		author: "NTKhang",
 		countDown: 5,
 		role: 0,
-		shortDescription: {
+		description: {
 			vi: "GPT chat",
 			en: "GPT chat"
 		},
-		longDescription: {
-			vi: "GPT chat",
-			en: "GPT chat"
-		},
-		category: "𝗔𝗜",
+		category: "box chat",
 		guide: {
 			vi: "   {pn} <draw> <nội dung> - tạo hình ảnh từ nội dung"
 				+ "\n   {pn} <clear> - xóa lịch sử chat với gpt"
@@ -117,7 +113,7 @@ module.exports = {
 				return message.reply(getLang('clearHistory'));
 			}
 			default: {
-				if (!args[1])
+				if (!args[0])
 					return message.reply(getLang('invalidContent'));
 
 				handleGpt(event, message, args, getLang, commandName);
