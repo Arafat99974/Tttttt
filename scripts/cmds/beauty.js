@@ -2,9 +2,9 @@ module.exports = {
 	config: {
 		name: "beauty",
 		version: "1.0",
-		author: "Samir",
+		author: "𝗦𝗵𝗔𝗻",
 		role: 0,
-		category: "fun",
+		category: "𝗟𝗢𝗩𝗘",
 		guide: {
 			vi: "Just For Fun",
 			en: "Calculate Your Beautiness"
