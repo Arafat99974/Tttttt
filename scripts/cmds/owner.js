@@ -48,7 +48,7 @@ config: {
 ~Religion: ${ownerInfo.religion}
 ~Hobby: ${ownerInfo.hobby}
 ~Fb: ${ownerInfo.Fb}
-~Height: ${ownerInfo.Height}
+~Height: ${ownerInfo.height}
 ~Nick: ${ownerInfo.nick}
 `;
 
