@@ -1,192 +1,79 @@
-const axios = require('axios');
+const axios = require("axios");
 
-// config 
-const apiKey = "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";
-const maxTokens = 500;
-const numberGenerateImage = 4;
-const maxStorageMessage = 4;
+async function baseUrl() {
+  try {
+    const base = await axios.get('https://raw.githubusercontent.com/nazrul4x/Noobs/main/Apis.json');
+    return base.data.api;
+  } catch (error) {
+    throw new Error('Failed to fetch base API URL');
+  }
+}
 
-if (!global.temp.openAIUsing)
-	global.temp.openAIUsing = {};
-if (!global.temp.openAIHistory)
-	global.temp.openAIHistory = {};
-
-const { openAIUsing, openAIHistory } = global.temp;
-
-module.exports = {
-	config: {
-		name: "gpt",
-		version: "1.4",
-		author: "NTKhang",
-		countDown: 5,
-		role: 0,
-		description: {
-			vi: "GPT chat",
-			en: "GPT chat"
-		},
-		category: "box chat",
-		guide: {
-			vi: "   {pn} <draw> <nội dung> - tạo hình ảnh từ nội dung"
-				+ "\n   {pn} <clear> - xóa lịch sử chat với gpt"
-				+ "\n   {pn} <nội dung> - chat với gpt",
-			en: "   {pn} <draw> <content> - create image from content"
-				+ "\n   {pn} <clear> - clear chat history with gpt"
-				+ "\n   {pn} <content> - chat with gpt"
-		}
-	},
-
-	langs: {
-		vi: {
-			apiKeyEmpty: "Vui lòng cung cấp api key cho openai tại file scripts/cmds/gpt.js",
-			invalidContentDraw: "Vui lòng nhập nội dung bạn muốn vẽ",
-			yourAreUsing: "Bạn đang sử dụng gpt chat, vui lòng chờ quay lại sau khi yêu cầu trước kết thúc",
-			processingRequest: "Đang xử lý yêu cầu của bạn, quá trình này có thể mất vài phút, vui lòng chờ",
-			invalidContent: "Vui lòng nhập nội dung bạn muốn chat",
-			error: "Đã có lỗi xảy ra\n%1",
-			clearHistory: "Đã xóa lịch sử chat của bạn với gpt"
-		},
-		en: {
-			apiKeyEmpty: "Please provide api key for openai at file scripts/cmds/gpt.js",
-			invalidContentDraw: "Please enter the content you want to draw",
-			yourAreUsing: "You are using gpt chat, please wait until the previous request ends",
-			processingRequest: "Processing your request, this process may take a few minutes, please wait",
-			invalidContent: "Please enter the content you want to chat",
-			error: "An error has occurred\n%1",
-			clearHistory: "Your chat history with gpt has been deleted"
-		}
-	},
-
-	onStart: async function ({ message, event, args, getLang, prefix, commandName }) {
-		if (!apiKey)
-			return message.reply(getLang('apiKeyEmpty', prefix));
-
-		switch (args[0]) {
-			case 'img':
-			case 'image':
-			case 'draw': {
-				if (!args[1])
-					return message.reply(getLang('invalidContentDraw'));
-				if (openAIUsing[event.senderID])
-					return message.reply(getLang("yourAreUsing"));
-
-				openAIUsing[event.senderID] = true;
-
-				let sending;
-				try {
-					sending = message.reply(getLang('processingRequest'));
-					const responseImage = await axios({
-						url: "https://api.openai.com/v1/images/generations",
-						method: "POST",
-						headers: {
-							"Authorization": `Bearer ${apiKey}`,
-							"Content-Type": "application/json"
-						},
-						data: {
-							prompt: args.slice(1).join(' '),
-							n: numberGenerateImage,
-							size: '1024x1024'
-						}
-					});
-					const imageUrls = responseImage.data.data;
-					const images = await Promise.all(imageUrls.map(async (item) => {
-						const image = await axios.get(item.url, {
-							responseType: 'stream'
-						});
-						image.data.path = `${Date.now()}.png`;
-						return image.data;
-					}));
-					return message.reply({
-						attachment: images
-					});
-				}
-				catch (err) {
-					const errorMessage = err.response?.data.error.message || err.message;
-					return message.reply(getLang('error', errorMessage || ''));
-				}
-				finally {
-					delete openAIUsing[event.senderID];
-					message.unsend((await sending).messageID);
-				}
-			}
-			case 'clear': {
-				openAIHistory[event.senderID] = [];
-				return message.reply(getLang('clearHistory'));
-			}
-			default: {
-				if (!args[0])
-					return message.reply(getLang('invalidContent'));
-
-				handleGpt(event, message, args, getLang, commandName);
-			}
-		}
-	},
-
-	onReply: async function ({ Reply, message, event, args, getLang, commandName }) {
-		const { author } = Reply;
-		if (author != event.senderID)
-			return;
-
-		handleGpt(event, message, args, getLang, commandName);
-	}
+module.exports.config = {
+  name: "gpt4",
+  aliases: ["gpt", "st"],
+  version: "1.0.0",
+  role: 0,
+  author: "dipto",
+  description: "Gpt4 AI with multiple conversation",
+  usePrefix: true,
+  guide: "[message]",
+  category: "AI",
+  countDown: 5,
 };
 
-async function askGpt(event) {
-	const response = await axios({
-		url: "https://api.openai.com/v1/chat/completions",
-		method: "POST",
-		headers: {
-			"Authorization": `Bearer ${apiKey}`,
-			"Content-Type": "application/json"
-		},
-		data: {
-			model: "gpt-3.5-turbo",
-			messages: openAIHistory[event.senderID],
-			max_tokens: maxTokens,
-			temperature: 0.7
-		}
-	});
-	return response;
-}
+module.exports.onReply = async function ({ api, event, Reply }) {
+  const { author } = Reply;
+  if (author !== event.senderID) return;
 
-async function handleGpt(event, message, args, getLang, commandName) {
-	try {
-		openAIUsing[event.senderID] = true;
+  const reply = event.body.toLowerCase();
+  if (!isNaN(reply)) return;
 
-		if (
-			!openAIHistory[event.senderID] ||
-			!Array.isArray(openAIHistory[event.senderID])
-		)
-			openAIHistory[event.senderID] = [];
+  try {
+    const response = await axios.get(`${await baseUrl()}/nazrul/gpt4?text=${encodeURIComponent(reply)}&senderID=${author}`);
+    const message = response.data.data;
+    await api.sendMessage(message, event.threadID, (err, info) => {
+      global.GoatBot.onReply.set(info.messageID, {
+        commandName: this.config.name,
+        type: 'reply',
+        messageID: info.messageID,
+        author: event.senderID,
+        link: message
+      });
+    }, event.messageID);
+  } catch (error) {
+    console.error(error.message);
+    api.sendMessage(`Error: ${error.message}`, event.threadID, event.messageID);
+  }
+};
 
-		if (openAIHistory[event.senderID].length >= maxStorageMessage)
-			openAIHistory[event.senderID].shift();
+module.exports.onStart = async function ({ api, args, event }) {
+  try {
+    const author = event.senderID;
+    let query = args.join(" ").toLowerCase();
 
-		openAIHistory[event.senderID].push({
-			role: 'user',
-			content: args.join(' ')
-		});
+    if (!args[0]) {
+      return api.sendMessage("Please provide a question to answer\n\nExample:\n!gpt4 hey", event.threadID, event.messageID);
+    }
 
-		const response = await askGpt(event);
-		const text = response.data.choices[0].message.content;
+    // Default language is 'bn' (Bengali)
+    if (!['bn', 'banglish', 'en'].includes(event.messageLanguage)) {
+      query = 'bn ' + query;  // Ensure the query starts with default language 'bn'
+    }
 
-		openAIHistory[event.senderID].push({
-			role: 'assistant',
-			content: text
-		});
-
-		return message.reply(text, (err, info) => {
-			global.GoatBot.onReply.set(info.messageID, {
-				commandName,
-				author: event.senderID,
-				messageID: info.messageID
-			});
-		});
-	}
-	catch (err) {
-		const errorMessage = err.response?.data.error.message || err.message || "";
-		return message.reply(getLang('error', errorMessage));
-	}
-	finally {
-		delete openAIUsing[event.senderID];
-	}
-}
+    const response = await axios.get(`${await baseUrl()}/nazrul/gpt4?text=${encodeURIComponent(query)}&senderID=${author}`);
+    const message = response.data.data;
+    await api.sendMessage({ body: message }, event.threadID, (error, info) => {
+      global.GoatBot.onReply.set(info.messageID, {
+        commandName: this.config.name,
+        type: 'reply',
+        messageID: info.messageID,
+        author,
+        link: message
+      });
+    }, event.messageID);
+  } catch (error) {
+    console.error(`Failed to get an answer: ${error.message}`);
+    api.sendMessage(`Error: ${error.message}`, event.threadID, event.messageID);
+  }
+};
