@@ -55,8 +55,8 @@ Nick: ${ownerInfo.nick}
     }, event.threadID, event.messageID);
 
     if (event.body.toLowerCase().includes('ownerinfo')) {
-      api.setMessageReaction('🚀', event.messageID, (err) => {}, true);
     }
+  api.setMessageReaction('🚀', event.messageID, (err) => {}, true);
   } catch (error) {
     console.error('Error in ownerinfo command:', error);
     return api.sendMessage('An error occurred while processing the command.', event.threadID);
