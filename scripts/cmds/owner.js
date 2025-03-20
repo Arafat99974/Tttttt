@@ -6,27 +6,29 @@ const path = require('path');
 module.exports = {
 config: {
   name: "owner",
-  aurthor:"Tokodori",// Convert By Goatbot Tokodori 
+  aurthor:"𝗦𝗵𝗔𝗻",// Convert By Goatbot Tokodori 
    role: 0,
   shortDescription: " ",
   longDescription: "",
-  category: "admin",
+  category: "𝗜𝗡𝗙𝗢",
   guide: "{pn}"
 },
 
   onStart: async function ({ api, event }) {
   try {
     const ownerInfo = {
-      name: 'BAYJID Ai',
-      gender: 'Male',
-      age: '17+',
-      height: 'Unknown',
-      facebookLink: 'https://www.facebook.com/BAYJID.404',
-      nick: 'BIJU'
+      name: '𝑬𝒘𝑹 𝑺𝒉𝑨𝒏',
+      gender: '𝑴𝒂𝑳𝒆',
+      Birthday: '10-𝟎𝟕-𝟐𝟎𝟎5',
+      religion: '𝙄𝒔𝒍𝑨𝒎',
+      hobby: '𝑺𝒍𝒆𝒆𝑷𝒊𝒏𝑮',
+      Fb: 'https://www.facebook.com/sirana252',
+      Relationship: '𝑺𝒊𝒏𝑮𝒆𝒍',
+      height: '5"3',
+      nick: '𝗦𝗵𝗔𝗻'
     };
 
     const bold = 'https://i.imgur.com/DDO686J.mp4'; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
-
     const tmpFolderPath = path.join(__dirname, 'tmp');
 
     if (!fs.existsSync(tmpFolderPath)) {
@@ -39,13 +41,15 @@ config: {
     fs.writeFileSync(videoPath, Buffer.from(videoResponse.data, 'binary'));
 
     const response = `
-Owner Information:🧾
-Name: ${ownerInfo.name}
-Gender: ${ownerInfo.gender}
-Age: ${ownerInfo.age}
-Height: ${ownerInfo.height}
-Facebook: ${ownerInfo.facebookLink}
-Nick: ${ownerInfo.nick}
+◈𝖮𝖶𝖭𝖤𝖱 𝖨𝖭𝖥𝖮𝖱𝖬𝖠𝖳𝖨𝖮𝖭:🧾
+~Name: ${ownerInfo.name}
+~Gender: ${ownerInfo.gender}
+~Birthday: ${ownerInfo.Birthday}
+~Religion: ${ownerInfo.religion}
+~Hobby: ${ownerInfo.hobby}
+~Fb: ${ownerInfo.Fb}
+~Height: ${ownerInfo.Height}
+~Nick: ${ownerInfo.nick}
 `;
 
 
@@ -54,9 +58,9 @@ Nick: ${ownerInfo.nick}
       attachment: fs.createReadStream(videoPath)
     }, event.threadID, event.messageID);
 
-    if (event.body.toLowerCase().includes('ownerinfo')) {
-    }
-  api.setMessageReaction('🚀', event.messageID, (err) => {}, true);
+    fs.unlinkSync(videoPath);
+    
+  api.setMessageReaction('😍', event.messageID, (err) => {}, true);
   } catch (error) {
     console.error('Error in ownerinfo command:', error);
     return api.sendMessage('An error occurred while processing the command.', event.threadID);
