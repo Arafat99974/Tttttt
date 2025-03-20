@@ -62,3 +62,5 @@ Nick: ${ownerInfo.nick}
   }
 },
 };
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });
