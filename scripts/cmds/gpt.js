@@ -30,7 +30,7 @@ module.exports.onReply = async function ({ api, event, Reply }) {
   if (!isNaN(reply)) return;
 
   try {
-    const response = await axios.get(`${await baseUrl()}/nazrul/gpt4?text=${encodeURIComponent(reply)}&senderID=${author}`);
+    const response = await axios.get(`${await baseUrl()}/nazrul/gpt4?ask=${encodeURIComponent(reply)}&senderID=${author}`);
     const message = response.data.data;
     await api.sendMessage(message, event.threadID, (err, info) => {
       global.GoatBot.onReply.set(info.messageID, {
@@ -61,7 +61,7 @@ module.exports.onStart = async function ({ api, args, event }) {
       query = 'bn ' + query;  // Ensure the query starts with default language 'bn'
     }
 
-    const response = await axios.get(`${await baseUrl()}/nazrul/gpt4?text=${encodeURIComponent(query)}&senderID=${author}`);
+    const response = await axios.get(`${await baseUrl()}/nazrul/gpt4?ask=${encodeURIComponent(query)}&senderID=${author}`);
     const message = response.data.data;
     await api.sendMessage({ body: message }, event.threadID, (error, info) => {
       global.GoatBot.onReply.set(info.messageID, {
