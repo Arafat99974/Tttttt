@@ -32,7 +32,7 @@ const platforms = {
   },
   YouTube: {
     regex: /(?:https?:\/\/)?(?:www\.)?(youtube\.com|youtu\.be)/,
-    endpoint: "/nazrul/ytDL2?uri=",
+    endpoint: "/nazrul/ytDL3?uri=",
   },
   Twitter: {
     regex: /(?:https?:\/\/)?(?:www\.)?x\.com/,
