@@ -5,14 +5,14 @@ const path = require("path");
 module.exports = {
   config: {
     name: "sdxl",
-    aliases: [],
-    author: "Mahi--",
+    aliases: ["sdxl"],
+    author: "𝗦𝗵𝗔𝗻",
     version: "1.0",
     cooldowns: 20,
     role: 0,
     shortDescription: "Generate an image using the SDXL2 API.",
     longDescription: "Generates an image using the provided prompt with the SDXL2 API.",
-    category: "fun",
+    category: "𝗙𝗨𝗠",
     guide: "{p}sdxl <prompt>"
   },
   onStart: async function ({ message, args, api, event }) {
