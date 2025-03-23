@@ -16,6 +16,7 @@ config: {
 },
 
   onStart: async function ({ api, event }) {
+  api.setMessageReaction('😍', event.messageID, (err) => {}, true);
   try {
     const ShanInfo = {
       name: '(╹◡╹)𝑬𝒘𝑹彡S𝓱ₐ𝚗(◍•ᴗ•◍)Ψ',
@@ -37,23 +38,25 @@ config: {
       youtube: 'নিজের কোনো চ্যানেল নাই ☺️, এমনিতেই কারো YouTube premium লাগলে ইনবক্স করিও?',
     };
     const now = moment().tz('Asia/Jakarta');
-		const date = now.format('MMMM Do YYYY');
-		const time = now.format('h:mm:ss A');
-		const uptime = process.uptime();
-		const seconds = Math.floor(uptime % 60);
-		const minutes = Math.floor((uptime / 60) % 60);
-		const hours = Math.floor((uptime / (60 * 60)) % 24);
-		const days = Math.floor(uptime / (60 * 60 * 24));
-		const uptimeString = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+    const date = now.format('MMMM Do YYYY');
+    const time = now.format('h:mm:ss A');
+    const uptime = process.uptime();
+    const seconds = Math.floor(uptime % 60);
+    const minutes = Math.floor((uptime / 60) % 60);
+    const hours = Math.floor((uptime / (60 * 60)) % 24);
+    const days = Math.floor(uptime / (60 * 60 * 24));
+    const uptimeString = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
 
-    const bold = 'https://i.imgur.com/DDO686J.mp4'; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
+    const ShAn = 'https://i.imgur.com/DDO686J.mp4'; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
+    const ShaN = ShAn[Math.floor(Math.random() * ShAn.length)];
     const tmpFolderPath = path.join(__dirname, 'tmp');
 
     if (!fs.existsSync(tmpFolderPath)) {
       fs.mkdirSync(tmpFolderPath);
     }
+    
 
-    const videoResponse = await axios.get(bold, { responseType: 'arraybuffer' });
+    const videoResponse = await axios.get(ShaN, { responseType: 'arraybuffer' });
     const videoPath = path.join(tmpFolderPath, 'owner_video.mp4');
 
     fs.writeFileSync(videoPath, Buffer.from(videoResponse.data, 'binary'));
@@ -89,7 +92,6 @@ config: {
 
     fs.unlinkSync(videoPath);
     
-  api.setMessageReaction('😍', event.messageID, (err) => {}, true);
   } catch (error) {
     console.error('Error in ownerinfo command:', error);
     return api.sendMessage('An error occurred while processing the command.', event.threadID);
