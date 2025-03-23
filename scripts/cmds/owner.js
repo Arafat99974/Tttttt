@@ -47,8 +47,8 @@ config: {
     const days = Math.floor(uptime / (60 * 60 * 24));
     const uptimeString = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
 
-    const ShAn = 'https://i.imgur.com/DDO686J.mp4'; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
-    
+    const ShAn = ['https://i.imgur.com/DDO686J.mp4', 'https://drive.google.com/uc?export=download&id=1GawJdgC48l8aRm8Cz8yMFgYsDaQduWTf']; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
+    const ShaN = ShAn[Math.floor(Math.random() * ShAn.length)];
     const tmpFolderPath = path.join(__dirname, 'tmp');
 
     if (!fs.existsSync(tmpFolderPath)) {
@@ -56,7 +56,7 @@ config: {
     }
     
 
-    const videoResponse = await axios.get(ShAn, { responseType: 'arraybuffer' });
+    const videoResponse = await axios.get(ShaN, { responseType: 'arraybuffer' });
     const videoPath = path.join(tmpFolderPath, 'owner_video.mp4');
 
     fs.writeFileSync(videoPath, Buffer.from(videoResponse.data, 'binary'));
@@ -87,7 +87,7 @@ config: {
 
     await api.sendMessage({
       body: response,
-      attachment: fs.createReadStream(videoPath)
+      attachment: await global.utils.getStreamFromURL(videoPath)
     }, event.threadID, event.messageID);
 
     fs.unlinkSync(videoPath);
