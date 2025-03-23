@@ -47,7 +47,7 @@ config: {
     const days = Math.floor(uptime / (60 * 60 * 24));
     const uptimeString = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
 
-    const ShAn = {'https://i.imgur.com/DDO686J.mp4', 'https://drive.google.com/uc?export=download&id=1zRAFPp3sMPOlVyhoEPnHflRpiRe6C2pt'}; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
+    const ShAn = 'https://i.imgur.com/DDO686J.mp4'; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
     
     const tmpFolderPath = path.join(__dirname, 'tmp');
 
