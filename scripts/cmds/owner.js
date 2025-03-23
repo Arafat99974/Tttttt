@@ -49,17 +49,6 @@ config: {
 
     const ShAn = ['https://drive.google.com/uc?export=download&id=15PMxc-gznm4Ona3fZLPTs7Yj3kOfx0Wf', 'https://drive.google.com/uc?export=download&id=17Udy1YF9M0f6kVkTY_I2s_Lgy3iXheuj']; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
     const ShaN = ShAn[Math.floor(Math.random() * ShAn.length)];
-    const tmpFolderPath = path.join(__dirname, 'tmp');
-
-    if (!fs.existsSync(tmpFolderPath)) {
-      fs.mkdirSync(tmpFolderPath);
-    }
-    
-
-    const videoResponse = await axios.get(ShaN, { responseType: 'arraybuffer' });
-    const videoPath = path.join(tmpFolderPath, 'owner_video.mp4');
-
-    fs.writeFileSync(videoPath, Buffer.from(videoResponse.data, 'binary'));
 
     const response = `💫《 ⩸__𝐁𝐨𝐭 𝐀𝐧𝐝 𝐎𝐰𝐧𝐞𝐫 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧__⩸ 》💫
 \🤖彡𝐵𝑜𝑡 𝑁𝑎𝑚𝑒 : ⩸__${global.GoatBot.config.nickNameBot}__⩸
@@ -87,10 +76,8 @@ config: {
 
     await api.sendMessage({
       body: response,
-      attachment: await global.utils.getStreamFromURL(videoPath)
+      attachment: await global.utils.getStreamFromURL(ShaN)
     }, event.threadID, event.messageID);
-
-    fs.unlinkSync(videoPath);
     
   } catch (error) {
     console.error('Error in ownerinfo command:', error);
