@@ -47,7 +47,7 @@ config: {
     const days = Math.floor(uptime / (60 * 60 * 24));
     const uptimeString = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
 
-    const ShAn = ['https://i.imgur.com/DDO686J.mp4', 'https://drive.google.com/uc?export=download&id=1GawJdgC48l8aRm8Cz8yMFgYsDaQduWTf']; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
+    const ShAn = ['https://drive.google.com/uc?export=download&id=15PMxc-gznm4Ona3fZLPTs7Yj3kOfx0Wf', 'https://drive.google.com/uc?export=download&id=17Udy1YF9M0f6kVkTY_I2s_Lgy3iXheuj']; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
     const ShaN = ShAn[Math.floor(Math.random() * ShAn.length)];
     const tmpFolderPath = path.join(__dirname, 'tmp');
 
