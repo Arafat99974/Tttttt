@@ -47,7 +47,13 @@ config: {
     const days = Math.floor(uptime / (60 * 60 * 24));
     const uptimeString = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
 
-    const ShAn = ['https://drive.google.com/uc?export=download&id=15PMxc-gznm4Ona3fZLPTs7Yj3kOfx0Wf', 'https://drive.google.com/uc?export=download&id=17Udy1YF9M0f6kVkTY_I2s_Lgy3iXheuj']; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
+    const ShAn = [
+      'https://drive.google.com/uc?export=download&id=15PMxc-gznm4Ona3fZLPTs7Yj3kOfx0Wf',
+      'https://drive.google.com/uc?export=download&id=17Udy1YF9M0f6kVkTY_I2s_Lgy3iXheuj',
+      'https://drive.google.com/uc?export=download&id=12PMfrf5d0ahx0e2fvfN4XB3G1hi7SusZ',
+      'https://drive.google.com/uc?export=download&id=12BOEV1OOgz464trZMHeoWv9YkW9L2TAj',
+      'https://drive.google.com/uc?export=download&id=127TkJBb_JGlQAnQZx-YUnPdrS44Zqbit'
+      ]; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
     const ShaN = ShAn[Math.floor(Math.random() * ShAn.length)];
 
     const response = `💫《 ⩸__𝐁𝐨𝐭 𝐀𝐧𝐝 𝐎𝐰𝐧𝐞𝐫 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧__⩸ 》💫
