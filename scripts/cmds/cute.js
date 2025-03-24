@@ -13,7 +13,7 @@ module.exports = {
 		guide: "{pn}"
 	},
 
-	onStart: async function ({ api, event, message }) {
+	onStart: async function ({ api, event, message, args }) {
 	api.setMessageReaction("✅", event.messageID, (err) => {}, true);
 		
 	 var SnAn = [
@@ -84,7 +84,8 @@ module.exports = {
 
 let shan = ShAn[Math.floor(Math.random()*ShAn.length)]
 message.reply({
-	body: '「 Dekho Ami koto Cute😘 」',attachment: await global.utils.getStreamFromURL(shan)
+	body: '「 Dekho Ami koto Cute😘 」',
+	attachment: await global.utils.getStreamFromURL(shan)
 })
 }
 }
