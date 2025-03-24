@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require("axios");
 const baseApiUrl = async () => {
   const base = await axios.get(
@@ -108,3 +109,5 @@ function formatMoney(num) {
   while (num >= 1000 && ++unit < units.length) num /= 1000;
   return num.toFixed(1).replace(/\.0$/, "") + units[unit];
         }
+    const wrapper = new GoatWrapper(module.exports);
+    wrapper.applyNoPrefix({ allowPrefix: true });
