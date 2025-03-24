@@ -22,7 +22,7 @@ module.exports = {
   },
 
   onStart: async function ({ api, event }) {
-    const imgbbApiKey = "1b4d99fa0c3195efe42ceb62670f2a25"; // Replace "YOUR_API_KEY_HERE" with your actual API key
+    const imgbbApiKey = "0152dc3e9da552bdde9633a2f02521dd"; // Replace "YOUR_API_KEY_HERE" with your actual API key
     const linkanh = event.messageReply?.attachments[0]?.url;
     if (!linkanh) {
       return api.sendMessage('Please reply to an image.', event.threadID, event.messageID);
