@@ -16,7 +16,7 @@ module.exports = {
 	onStart: async function ({ api, event, message }) {
 	api.setMessageReaction("✅", event.messageID, (err) => {}, true);
 		
-	 var SnAn = [
+	 var ShAn = [
 "https://i.ibb.co/ksnQjKQf/image.jpg",
 "https://i.ibb.co/ksnQjKQf/image.jpg",
 "https://i.ibb.co/TCwP5f6/image.jpg",
@@ -83,7 +83,7 @@ module.exports = {
 "https://i.postimg.cc/5y8S62sf/FB-IMG-1738902128104.jpg"];
 
 let shan = ShAn[Math.floor(Math.random()*ShAn.length)]
-message.send({
+message.reply({
 	body: '「 Dekho Ami koto Cute😘 」',
 	attachment: await global.utils.getStreamFromURL(shan)
 })
