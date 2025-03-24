@@ -20,7 +20,7 @@ Yo, my prefix is [ 𓆩 ( 𓆪 ]\n
 ➥ 𝙊𝙒𝙉𝙀𝙍: ~𝑺𝒉𝑨𝒏
 ➥ ✓sim [bby] -> talk to bot
 ➥ ✓callad [message] -> report any problem encountered
-➥ ✓help -> usage of command\n\nHave fun using it enjoy!❤️\nBot Developer: https://www.facebook.com/sirana252`,
+➥ ✓help -> usage of command\n\nHave fun using it enjoy!❤️\nBot Developer:https://www.facebook.com/sirana252`,
  attachment: await global.utils.getStreamFromURL("https://i.imgur.com/M4luPbE.gif")
  });
  }
