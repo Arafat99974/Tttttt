@@ -19,8 +19,8 @@ module.exports = {
       return message.reply("Please reply to an image to upscale it.");
     }
     const imgurl = encodeURIComponent(event.messageReply.attachments[0].url);
-    const noobs = 'xyz';
-    const upscaleUrl = `https://smfahim.${noobs}/4k?url=${imgurl}`;
+    const SnAn = 'xyz';
+    const upscaleUrl = `https://smfahim.${SnAn}/4k?url=${imgurl}`;
     
     message.reply("🔄| Processing... Please wait a moment.", async (err, info) => {
       try {
