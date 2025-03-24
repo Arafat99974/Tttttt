@@ -28,7 +28,6 @@ module.exports = {
       const now = moment().tz('Asia/Jakarta');
       const date = now.format('MMMM Do YYYY');
       const time = now.format('h:mm:ss A');
-      const uptime = process.uptime();
       const days = Math.floor(uptime / 86400);
       const hours = Math.floor((uptime % 86400) / 3600);
       const minutes = Math.floor((uptime % 3600) / 60);
