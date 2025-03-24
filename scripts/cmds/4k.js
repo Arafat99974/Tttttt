@@ -3,7 +3,6 @@ const axios = require("axios");
 module.exports = {
   config: {
     name: "4k",
-    aliases: ["upscale"],
     version: "1.1",
     role: 0,
     author: "𝗦𝗵𝗔𝗻",
@@ -19,8 +18,8 @@ module.exports = {
       return message.reply("Please reply to an image to upscale it.");
     }
     const imgurl = encodeURIComponent(event.messageReply.attachments[0].url);
-    const SnAn = 'xyz';
-    const upscaleUrl = `https://smfahim.${SnAn}/4k?url=${imgurl}`;
+    const ShAn = 'xyz';
+    const upscaleUrl = `https://smfahim.${ShAn}/4k?url=${imgurl}`;
     
     message.reply("🔄| Processing... Please wait a moment.", async (err, info) => {
       try {
