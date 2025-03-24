@@ -32,14 +32,14 @@ module.exports = {
 		try {
 			api.setMessageReaction("🕐", event.messageID, (err) => {}, true);  
 
-			const apiUrl = "https://anistatus.onrender.com/kshitiz";  
+			const apiUrl = "https://nazrul-xyz.vercel.app";  
 			const response = await axios.get(apiUrl);
 
 			if (response.data.url) {
 				const tikTokUrl = response.data.url;
 				console.log(`TikTok Video URL: ${tikTokUrl}`);
 
-				const turtleApiUrl = `https://kshitiz-tikdl.onrender.com/tiktok?url=${encodeURIComponent(tikTokUrl)}`;
+				const turtleApiUrl = `https://nazrul-xyz.vercel.app/nazrul/tikDl?url=${encodeURIComponent(tikTokUrl)}`;
 				const turtleResponse = await axios.get(turtleApiUrl);
 
 				if (turtleResponse.data.videoUrl) {
