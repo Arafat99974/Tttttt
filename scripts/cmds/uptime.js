@@ -1,3 +1,5 @@
+const moment = require('moment-timezone');
+
 module.exports = {
   config: {
     name: "uptime",
@@ -23,6 +25,10 @@ module.exports = {
       const uptime = process.uptime();
 
       // Calculate formatted uptime
+      const now = moment().tz('Asia/Jakarta');
+      const date = now.format('MMMM Do YYYY');
+      const time = now.format('h:mm:ss A');
+      const uptime = process.uptime();
       const days = Math.floor(uptime / 86400);
       const hours = Math.floor((uptime % 86400) / 3600);
       const minutes = Math.floor((uptime % 3600) / 60);
@@ -38,16 +44,20 @@ module.exports = {
 
       // Stylish message design
       const message = `
-┏━━━━━━━━━━━━━━━┓
-     ❀ėฬ𝔯 𝖋á𝒊ⲍ𐍈❀
-┗━━━━━━━━━━━━━━━┛
-📆 Uptime: ${uptimeString}
-🙋 Total Users: ${allUsers.length}
-💬 Total Threads: ${allThreads.length}
-🔥 Active Threads: ${activeThreads}
-📨 Total Messages: ${totalMessages}
-━━━━━━━━━━━━━━━━━━━
-💡 Keep the vibes going!
+ ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
+   💫《 ⩸__𝐁𝐨𝐭 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧__⩸ 》💫
+  🤖..𝐵𝑜𝑡 𝑁𝑎𝑚𝑒 : ⩸__${global.GoatBot.config.nickNameBot}__⩸
+  👾 𝐵𝑜𝑡 𝑆𝑦𝑠𝑡𝑒𝑚 𝑃𝑟𝑒𝑓𝑖𝑥 : ${global.GoatBot.config.prefix}
+  ⏰ 𝑇𝑖𝑚𝑒: ${time}
+  📆 𝐷𝑎𝑡𝑒: ${date}
+  📛 𝐵𝑜𝑡 𝐼𝑠 𝑅𝑢𝑛𝑛𝑖𝑛𝑔 𝐹𝑜𝑟: ${uptimeString}
+  🙋 𝑇𝑜𝑡𝑎𝑙 𝑈𝑠𝑒𝑟𝑠: ${allUsers.length}
+  💬 𝑇𝑜𝑡𝑎𝑙 𝑇ℎ𝑟𝑒𝑎𝑑𝑠: ${allThreads.length}
+  🔥 𝐴𝑐𝑡𝑖𝑣𝑒 𝑇ℎ𝑟𝑒𝑎𝑑𝑠: ${activeThreads}
+  📨 𝑇𝑜𝑡𝑎𝑙 𝑀𝑒𝑠𝑠𝑎𝑔𝑒: ${totalMessages}
+  ━━━━━━━━━━━━━━━━━━━
+ 💡 𝐾𝑒𝑒𝑝 𝑇ℎ𝑒 𝑉𝑖𝑏𝑒𝑠 𝐺𝑜𝑖𝑛𝑔!
+┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
       `;
 
       api.sendMessage(message.trim(), event.threadID);
