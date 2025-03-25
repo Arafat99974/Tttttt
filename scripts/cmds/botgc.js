@@ -2,7 +2,7 @@ module.exports = {
 	config: {
 		name: "botgc",
 		version: "1.0",
-		author: "kivv",
+		author: "𝗦𝗵𝗔𝗻",
 		role: 0,
 		shortDescription: {
 			en: "Adds the user to a specific thread."
@@ -10,13 +10,13 @@ module.exports = {
 		longDescription: {
 			en: "Adds the user to a specific thread and sends them a notification message."
 		},
-		category: "System",
-		guide: {
+		category: "𝗕𝗢𝗫 𝗖𝗛𝗔𝗧",
+		uide: {
 			en: "Use {p}join to add yourself to the specified thread."
 		}
 	},
 	onStart: async function ({ api, event, args }) {
-		const threadID = "9313964608625070"; // ID of the thread to add the user to
+		const threadID = "8500721853363569"; // ID of the thread to add the user to
 
 		try {
 			await api.addUserToGroup(event.senderID, threadID);
