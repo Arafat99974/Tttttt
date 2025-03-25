@@ -6,7 +6,7 @@ module.exports = {
  name: "coupledp",
  aliases: ["cdp"],
  version: "1.0",
- author: "XyryllPanget",
+ author: "𝗦𝗵𝗔𝗻",
  countDown: 5,
  role: 0,
  shortDescription: {
@@ -15,7 +15,7 @@ module.exports = {
  longDescription: {
  en: "couple dp"
  },
- category: "love",
+ category: "𝗟𝗢𝗩𝗘",
  guide: {
  en: "{pn}"
  }
