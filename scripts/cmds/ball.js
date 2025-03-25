@@ -8,12 +8,12 @@ module.exports = {
         name: "ball",
         aliases: ["geda"],
         version: "1.2",
-        author: "Otineeeeyyyy",
+        author: "𝗦𝗵𝗔𝗻",
         countDown: 5,
         role: 0,
         shortDescription: "tag a person to kick geda/ball shot",
         longDescription: "",
-        category: "fun",
+        category: "𝗙𝗨𝗡",
         guide: "{pn}"
     },
 
