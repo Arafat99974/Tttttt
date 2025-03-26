@@ -5,12 +5,12 @@ module.exports = {
   config: {
     name: "buttslap",
     version: "1.1",
-    author: "KSHITIZ",
+    author: "𝗦𝗵𝗔𝗻",
     countDown: 5,
     role: 0,
     shortDescription: "Buttslap image",
     longDescription: "Buttslap image",
-    category: "meme",
+    category: "𝗙𝗨𝗡",
     guide: {
       en: "   {pn} @tag"
     }
