@@ -5,7 +5,7 @@ const path = require("path");
 module.exports = {
   config: {
     name: "chuna",
-    aliases: ["bolo", "kow"],
+    aliases: ["anya", "kow"],
     author: "𝗦𝗵𝗔𝗻",
     version: "3.1",
     cooldowns: 5,
