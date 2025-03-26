@@ -1,18 +1,19 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require("axios");
 const fs = require("fs-extra");
 const path = require("path");
 
 module.exports = {
   config: {
-    name: "chuna",
-    aliases: ["anya", "kow"],
+    name: "anya",
+    aliases: ["anya"],
     author: "𝗦𝗵𝗔𝗻",
     version: "3.1",
     cooldowns: 5,
     role: 0,
     shortDescription: { en: "Chat with Anya Forger" },
     longDescription: { en: "Chat with Anya Forger. Now powered by Redwans API!" },
-    category: "𝗔𝗜-𝗖𝗛𝗔𝗧",
+    category: "𝗔𝗜",
     guide: { en: "{p}{n} [text]" },
   },
 
@@ -77,3 +78,5 @@ module.exports = {
     }
   },
 };
+const wrapper = new GoatWrapper(module.exports);
+    wrapper.applyNoPrefix({ allowPrefix: true });
