@@ -2,11 +2,14 @@ const axios = require('axios');
 
 module.exports = {
   config: {
-    name:"countryinfo",
-    aliases: ["country"],
-    version: "1.0",
-		category: "info",
-    author: "Lahatra"
+	  name:"countryinfo",
+	  aliases: ["country"],
+	  version: "1.0",
+	  author: "𝗦𝗵𝗔𝗻",
+	  shortDescription: "send you a country information",
+	  longDescription: "send you a country information",
+	  category: "𝗜𝗡𝗙𝗢",
+	  guide: "{pn} country Name"
   },
 
   onStart: async function ({ api, event, args }) {
@@ -24,10 +27,10 @@ module.exports = {
         let message = '';
 
         message += `Name Of The Country: ${country.name.common}
-Capital: ${country.capital}
-Population: ${country.population}
-Language:  ${Object.values(country.languages).join(', ')}
-`;
+        Capital: ${country.capital}
+        Population: ${country.population}
+        Language:  ${Object.values(country.languages).join(', ')}
+         `;
 
         await api.sendMessage(message, event.threadID, event.messageID);
       } else {
