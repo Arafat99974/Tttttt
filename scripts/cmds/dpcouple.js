@@ -3,7 +3,7 @@ const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
 	config: {
 		name: "dpc",
-		aliases: ["dpc",],
+		aliases: ["dpcouple",],
 		version: "1.0",
 		author: "ShAn",
 		countDown: 5,
@@ -15,8 +15,7 @@ module.exports = {
 	},
 
 	onStart: async function ({ api, event, message }) {
-	api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
-	 var link = [
+	 var ShAn = [
 "https://i.postimg.cc/D0s301Vm/FB-IMG-1738905549016.jpg",
 "https://i.postimg.cc/vHFdj29n/FB-IMG-1738905551745.jpg",
 "https://i.postimg.cc/d01MdbMb/FB-IMG-1738905554232.jpg",
@@ -149,10 +148,10 @@ module.exports = {
 "https://i.postimg.cc/MTDTQNLQ/FB-IMG-1738563603226.jpg",
 "https://i.postimg.cc/sgkvdpSv/FB-IMG-1738563609022.jpg"]
 
-let img = link[Math.floor(Math.random()*link.length)]
+let ShaN = ShAn[Math.floor(Math.random()*ShAn.length)]
 api.setMessageReaction("✅", event.messageID, (err) => {}, true);
 message.send({
-	body: '「 EI NAW TMR DPZ😎  」',attachment: await global.utils.getStreamFromURL(img)
+	body: '「 EI NAW TMR DPZ😎  」',attachment: await global.utils.getStreamFromURL(ShaN)
 })
 }
  }
