@@ -5,12 +5,12 @@ module.exports = {
   config: {
     name: "cry",
     version: "1.0",
-    author: "kshitiz",
+    author: "𝗦𝗵𝗔𝗻",
     countDown: 1,
     role: 0,
     shortDescription: "",
     longDescription: "",
-    category: "meme",
+    category: "𝗙𝗨𝗡",
     guide: "{pn}",
     envConfig: {
       deltaNext: 5
