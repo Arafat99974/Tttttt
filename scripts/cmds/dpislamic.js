@@ -1,7 +1,9 @@
+const { GoatWrapper } = require('fca-liane-utils');
+
 module.exports = {
 	config: {
 		name: "dpi",
-		aliases: ["dpi",],
+		aliases: ["dpislamic",],
 		version: "1.0",
 		author: "ShAn",
 		countDown: 5,
@@ -13,8 +15,7 @@ module.exports = {
 	},
 
 	onStart: async function ({ api, event, message }) {
-	api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
-	 var link = [
+	 var ShAn = [
 "https://i.postimg.cc/GmxCRzXy/FB-IMG-1740385210796.jpg",
 "https://i.postimg.cc/JnvwxFz9/FB-IMG-1740385214986.jpg",
 "https://i.postimg.cc/hvdk50Jh/FB-IMG-1740385218111.jpg",
@@ -101,10 +102,12 @@ module.exports = {
 "https://i.postimg.cc/BQBnwXBG/FB-IMG-1738610734607.jpg",
 "https://i.postimg.cc/3xhDdsn3/FB-IMG-1738610739278.jpg"]
 
-let img = link[Math.floor(Math.random()*link.length)]
+let ShaN = ShAn[Math.floor(Math.random()*ShAn.length)]
 api.setMessageReaction("✅", event.messageID, (err) => {}, true);
 message.send({
-	body: '「 EI NAW TMR DPZ😎  」',attachment: await global.utils.getStreamFromURL(img)
+	body: '「 EI NAW TMR DPZ😎  」',attachment: await global.utils.getStreamFromURL(ShaN)
 })
 }
-		 }
+}
+const wrapper = new GoatWrapper(module.exports);
+    wrapper.applyNoPrefix({ allowPrefix: true });
