@@ -1,14 +1,14 @@
 module.exports = {
   config: {
     name: "choose",
-    aliases: ["rand"],
+    aliases: [""],
     version: "1.0",
-    author: "Riley",
+    author: "𝗦𝗵𝗔𝗻",
     countDown: 0,
     role: 0,
     shortDescription: "Choose one option from a list",
     longDescription: "Choose one option from a list",
-    category: "fun",
+    category: "𝗙𝗨𝗡",
     guide: {
       en: "{pn} option1, option2, option3 - Choose one option",
     },
