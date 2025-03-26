@@ -17,6 +17,9 @@ module.exports = {
 	api.setMessageReaction("✅", event.messageID, (err) => {}, true);
 		
 	 var ShAn = [
+"https://i.ibb.co/twgGn8nd/image.png",
+"https://i.ibb.co/n4x6X8R/image.png",
+"https://i.ibb.co/cXwcJ9yw/image.png",
 "https://i.ibb.co/ksnQjKQf/image.jpg",
 "https://i.ibb.co/ksnQjKQf/image.jpg",
 "https://i.ibb.co/TCwP5f6/image.jpg",
