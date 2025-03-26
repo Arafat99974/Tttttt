@@ -16,6 +16,7 @@ module.exports = {
 	},
 
 	onStart: async function ({ message, args, api, event }) {
+		api.setMessageReaction("✅", event.messageID, (err) => {}, true);
 		const isFaceUp = Math.random() > 0.5;
 		let link, body;
 		if (isFaceUp) {
