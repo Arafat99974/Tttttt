@@ -1,3 +1,5 @@
+const { GoatWrapper } = require('fca-liane-utils');
+
 module.exports = {
 	config: {
 		name: "dpc",
@@ -153,4 +155,6 @@ message.send({
 	body: '「 EI NAW TMR DPZ😎  」',attachment: await global.utils.getStreamFromURL(img)
 })
 }
-		 }
+ }
+const wrapper = new GoatWrapper(module.exports);
+    wrapper.applyNoPrefix({ allowPrefix: true });
