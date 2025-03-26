@@ -15,8 +15,7 @@ module.exports = {
 	},
 
 	onStart: async function ({ api, event, message }) {
-	api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
-	 var link = [
+	 var ShAn = [
 "https://i.postimg.cc/ZK6HsQq6/FB-IMG-1739895098516.jpg",
 "https://i.postimg.cc/5213hmHT/FB-IMG-1739895102242.jpg",
 "https://i.postimg.cc/bvV92c6f/FB-IMG-1739895105866.jpg",
@@ -242,10 +241,10 @@ module.exports = {
 "https://i.postimg.cc/vHP86gY3/FB-IMG-1738610046064.jpg",
 "https://i.postimg.cc/VkpYDxbt/FB-IMG-1738610049331.jpg",
 "https://i.postimg.cc/0ybkGkrx/FB-IMG-1738610052804.jpg"]
-let img = link[Math.floor(Math.random()*link.length)]
+let ShaN = ShAn[Math.floor(Math.random()*ShAn.length)]
 api.setMessageReaction("✅", event.messageID, (err) => {}, true);
 message.send({
-	body: '「 EI NAW TMR DPZ😎  」',attachment: await global.utils.getStreamFromURL(img)
+	body: '「 EI NAW TMR DPZ😎  」',attachment: await global.utils.getStreamFromURL(ShaN)
 })
 }
  }
