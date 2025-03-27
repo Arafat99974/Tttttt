@@ -10,7 +10,7 @@ module.exports = {
 		name: 'anistatus',
 		aliases: ['as'],
 		version: '1.0',
-		author: '𝗦𝗵𝗔𝗻',//Dont Change It.
+		author: '𝗦𝗵𝗔𝗻',
 		countDown: 5,
 		role: 0,
 		shortDescription: 'anime status',
@@ -32,14 +32,14 @@ module.exports = {
 		try {
 			api.setMessageReaction("🕐", event.messageID, (err) => {}, true);  
 
-			const apiUrl = "https://nazrul-xyz.vercel.app";  
+			const apiUrl = "https://anistatus.onrender.com/kshitiz";  
 			const response = await axios.get(apiUrl);
 
 			if (response.data.url) {
 				const tikTokUrl = response.data.url;
 				console.log(`TikTok Video URL: ${tikTokUrl}`);
 
-				const turtleApiUrl = `https://nazrul-xyz.vercel.app/nazrul/tikDl?url=${encodeURIComponent(tikTokUrl)}`;
+				const turtleApiUrl = `https://kshitiz-tikdl.onrender.com/tiktok?url=${encodeURIComponent(tikTokUrl)}`;
 				const turtleResponse = await axios.get(turtleApiUrl);
 
 				if (turtleResponse.data.videoUrl) {
