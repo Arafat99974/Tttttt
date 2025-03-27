@@ -16,7 +16,7 @@ module.exports = {
         const catagory = ["general", "science", "person", "game", "history", "english", "july-24"];
         const type = catagory[Math.floor(Math.random() * catagory.length)];
         const input = args.join('').toLowerCase() || type;
-        let timeout = 30;
+        let timeout = 50;
         let category = input === "en" ? "english" : type;
 
         try {
