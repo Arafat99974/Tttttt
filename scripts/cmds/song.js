@@ -51,7 +51,7 @@ module.exports = {
 		try {
 			const format = 'mp3';
 			const path = `ytb_${format}_${videoID}.${format}`;
-			const { data: { title, downloadLink } } = await axios.get(`${await baseApiUrl()}/nazrul/ytDL3?uri=${videoID}&format=${format}&quality=3`);
+			const { data: { title, downloadLink } } = await axios.get(`${await baseApiUrl()}/nazrul/ytDL?uri=${videoID}&format=${format}&quality=3`);
 
 			await api.sendMessage({
 				body: `🎶 Title: ${title}`,
