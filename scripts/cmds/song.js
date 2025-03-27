@@ -39,7 +39,7 @@ module.exports.onStart = async ({ api, event, args }) => {
     return api.sendMessage("❌ Provide a song name or YouTube link.", threadID, messageID);
   }
 
-  api.setMessageReaction("🦆", messageID, () => {}, true);
+  api.setMessageReaction("🎤", messageID, () => {}, true);
 
   try {
     const { searchApi, downloadApi } = await fetchApis();
