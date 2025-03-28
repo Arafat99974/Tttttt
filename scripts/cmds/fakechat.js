@@ -8,12 +8,12 @@ module.exports = {
         name: "fakechat",
         aliases: ["fc"],
         version: "1.0",
-        author: "Vex_kshitiz",
+        author: "𝗦𝗵𝗔𝗻",
         countDown: 5,
         role: 0,
         shortDescription: "",
         longDescription: "fake fb chat",
-        category: "fun",
+        category: "𝗙𝗨𝗠",
         guide: "{p} fakechat uid | {text} or {p} fakechat @mention | {text} or reply to someone text by fakechat {text} -{theme}"
     },
 
