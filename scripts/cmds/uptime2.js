@@ -1,5 +1,4 @@
 const os = require("os");
-const fs = require("fs-extra");
 
 const startTime = new Date(); // Moved outside onStart
 
@@ -40,13 +39,9 @@ module.exports = {
 
       const allUsers = await usersData.getAll();
       const allThreads = await threadsData.getAll();
-      const currentDate = new Date();
-      const options = { year: "numeric", month: "numeric", day: "numeric" };
-      const date = currentDate.toLocaleDateString("en-US", options);
-      const time = currentDate.toLocaleTimeString("en-US", {
-        timeZone: "Asia/Dhaka",
-        hour12: true,
-      });
+      const now = moment().tz('Asia/Dhaka');
+      const date = now.format('MMMM Do YYYY');
+      const time = now.format('h:mm:ss A');
 
       const timeStart = Date.now();
       await api.sendMessage({
