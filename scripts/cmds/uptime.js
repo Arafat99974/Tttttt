@@ -6,7 +6,7 @@ module.exports = {
     aliases:["up", "upt"],
     version: "1.7",
     author: "𝗦𝗵𝗔𝗻",
-    role: 2,
+    role: 0,
     shortDescription: {
       en: "Get stylish bot stats and uptime!"
     },
@@ -25,7 +25,7 @@ module.exports = {
       const uptime = process.uptime();
 
       // Calculate formatted uptime
-      const now = moment().tz('Asia/Jakarta');
+      const now = moment().tz('Asia/Dhaka');
       const date = now.format('MMMM Do YYYY');
       const time = now.format('h:mm:ss A');
       const days = Math.floor(uptime / 86400);
