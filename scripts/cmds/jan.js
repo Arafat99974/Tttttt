@@ -15,9 +15,9 @@ async function getBotResponse(message) {
 
 module.exports = {
   config: {
-    name: "jan",
+    name: "bot2",
     version: "1.7",
-    author: "MahMUD",
+    author: "Shan",
     role: 0,
     description: { en: "no prefix command." },
     category: "ai",
