@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const { getPrefix } = global.utils;
 
 module.exports = {
@@ -238,3 +239,5 @@ module.exports = {
 		message.reply(getLang("successRemove"));
 	}
 };
+const wrapper = new GoatWrapper(module.exports);
+    wrapper.applyNoPrefix({ allowPrefix: true });
