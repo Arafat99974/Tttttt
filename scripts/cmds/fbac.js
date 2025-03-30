@@ -2,7 +2,7 @@
 
 const accounts = [];
 
-//dito naman na part yung structuring ko Dapat 👇
+//ShAn naman na part yung structuring ko Dapat 👇
 function generateAccount(email, password) {
 	return `[𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙚 ✅]
 𝖤𝗆𝖺𝗂𝗅: ${email}
@@ -49,6 +49,9 @@ module.exports = {
 	} else {
 		api.sendMessage("Invalid command. Usage: #fbacc get or #fbacc add <email> <password> or #fbacc list", event.threadID);
 	}
+	setTimeout(() => {
+        api.unsendMessage(generateAccount.messageID);
+      }, 50000);
 },
 };
 
