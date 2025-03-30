@@ -1,5 +1,3 @@
-const { GoatWrapper } = require('fca-liane-utils');
-
 module.exports = {
   config: {
     name: "girlsvideo",
@@ -126,9 +124,7 @@ module.exports = {
 
       setTimeout(() => {
         api.unsendMessage(loadingMessage.messageID);
-      }, 40000);
+      }, 30000);
     }
   },
 };
-const wrapper = new GoatWrapper(module.exports);
-    wrapper.applyNoPrefix({ allowPrefix: true });
