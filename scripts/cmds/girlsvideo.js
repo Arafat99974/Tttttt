@@ -6,7 +6,7 @@ module.exports = {
     aliases: ["girl"],
     version: "2.0",
     author: "𝗦𝗵𝗔𝗻",
-    countDown: 0,
+    countDown: 20,
     role: 0,
     shortDescription: "",
     longDescription: "send you a hot girl video",
