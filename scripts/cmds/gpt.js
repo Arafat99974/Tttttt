@@ -1,4 +1,3 @@
-const { GoatWrapper } = require('fca-liane-utils');
 const axios = require("axios");
 const baseUrl = async () => {
     const base = await axios.get(`https://raw.githubusercontent.com/Mostakim0978/D1PT0/refs/heads/main/baseApiUrl.json`);
@@ -7,14 +6,14 @@ const baseUrl = async () => {
 
 module.exports.config = {
   name: "gpt4",
-  aliases: ["gpt"],
+  aliases: [],
   version: "1.0.0",
   role: 0, 
-  author: "𝗦𝗵𝗔𝗻", 
+  author: "dipto", 
   description: "Gpt4 ai with multiple conversation",
   usePrefix: true,
   guide: "[message]",
-  category: "𝗔𝗜",
+  category: "Ai",
   countDown: 5,
 };
 module.exports.onReply = async function ({ api, event, Reply }) {
@@ -69,5 +68,3 @@ module.exports.onStart = async function ({ api, args, event }) {
     api.sendMessage(`Error: ${error.message}`, event.threadID, event.messageID);
   }
 };
-const wrapper = new GoatWrapper(module.exports);
-    wrapper.applyNoPrefix({ allowPrefix: true });
