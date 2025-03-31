@@ -25,7 +25,7 @@ module.exports = {
       }
     }
 
-    api.setMessageReaction("😘", event.messageID, () => {}, true);
+    api.setMessageReaction("🌀", event.messageID, () => {}, true);
     const query = args.join(' ');
 
     if (!query) {
