@@ -1,4 +1,3 @@
-const { GoatWrapper } = require('fca-liane-utils');
 const axios = require('axios');
 
 module.exports = {
@@ -25,7 +24,7 @@ module.exports = {
       }
     }
 
-    api.setMessageReaction("🌀", event.messageID, () => {}, true);
+    api.setMessageReaction("😘", event.messageID, () => {}, true);
     const query = args.join(' ');
 
     if (!query) {
@@ -56,5 +55,3 @@ module.exports = {
     }
   },
 };
-const wrapper = new GoatWrapper(module.exports);
-   wrapper.applyNoPrefix({ allowPrefix: true });
