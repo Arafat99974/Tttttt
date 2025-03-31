@@ -5,7 +5,7 @@ module.exports = {
     name: "copuledp",
     aliases: ["cdp"],
     version: "1.7",
-    author: "𝗦𝗵𝗔𝗻",
+    author: "MahMUD",
     countDown: 2,
     role: 0,
     longDescription: "Fetch a random couple DP for nibba and nibbi",
