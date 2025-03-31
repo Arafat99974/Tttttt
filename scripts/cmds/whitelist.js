@@ -34,8 +34,7 @@ module.exports = {
 	},
 
 	onStart: async function ({ message, args, usersData, event, getLang, api }) {
-      return;
-    }
+      
     const { writeFileSync } = require("fs-extra");
 		switch (args[0]) {
 			case "add":
