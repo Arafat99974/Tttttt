@@ -4,13 +4,13 @@ module.exports = {
 		name: "whitelist",
 		aliases: ["wl", "whitelist"],
 		version: "1.0",
-		author: "rehat--",
+		author: "𝗦𝗵𝗔𝗻",
 		countDown: 5,
 		role: 2,
 		longDescription: {
 			en: "Add, remove, edit whiteListIds"
 		},
-		category: "owner",
+		category: "𝗕𝗢𝗧 𝗠𝗘𝗡𝗘𝗚𝗠𝗘𝗡𝗧",
 		guide: {
 			en: '   {pn} [add | -a] <uid | @tag>: Add admin role for user'
 				+ '\n   {pn} [remove | -r] <uid | @tag>: Remove admin role of user'
@@ -34,13 +34,6 @@ module.exports = {
 	},
 
 	onStart: async function ({ message, args, usersData, event, getLang, api }) {
-    const permission = ["100045644423035"];
-    if (!permission.includes(event.senderID)) {
-      api.sendMessage(
-        "~Oh Baka! Seems you don't have permission to use this command!🐱",
-        event.threadID,
-        event.messageID
-      );
       return;
     }
     const { writeFileSync } = require("fs-extra");
