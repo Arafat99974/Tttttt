@@ -5,7 +5,7 @@ module.exports = {
   config: {
     name: "anisr",
     aliases: ["tiksr", "tiktoksr"],
-    author: "𝗦𝗵𝗔𝗻",
+    author: "MahMUD",
     version: "1.7",
     category: "𝗠𝗘𝗗𝗜𝗔",
     guide: { en: "{p}{n} [query]" },
