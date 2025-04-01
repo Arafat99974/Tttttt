@@ -17,7 +17,6 @@ const loadConfig = () => {
     }
   } catch (err) {
     console.error("Error loading config:", err);
-    // If there's an error reading, keep default state
   }
 };
 
@@ -48,7 +47,7 @@ const dApi = async () => {
 
 module.exports.config = {
   name: "autodl",
-  version: "1.7.1",
+  version: "1.7.2",
   author: "Nazrul",
   role: 0,
   description: "Auto-download videos from supported platforms (toggle with on/off)",
@@ -59,15 +58,12 @@ module.exports.config = {
   },
 };
 
-// Required onStart function
-module.exports.onStart = async ({ api, event }) => {
-  // Initialization code can go here
+module.exports.onStart = async ({}) => {
   console.log("AutoDL command initialized");
-  // You could add startup messages or other initialization logic here
 };
 
 const platforms = {
-  TikTok: {
+TikTok: {
     regex: /(?:https?:\/\/)?(?:www\.)?tiktok\.com/,
     endpoint: "/nazrul/tikDL?url=",
   },
@@ -80,7 +76,7 @@ const platforms = {
     endpoint: "/nazrul/ytDL?uri=",
   },
   Twitter: {
-    regex: /(?:https?:\/\/)?(?:www\.)?(x\.com|twitter\.com)/,
+    regex: /(?:https?:\/\/)?(?:www\.)?x\.com/,
     endpoint: "/nazrul/alldl?url=",
   },
   Instagram: {
@@ -94,8 +90,7 @@ const platforms = {
 };
 
 const detectPlatform = (url) => {
-  if (!url) return null;
-  for (const [platform, data] of Object.entries(platforms)) {
+for (const [platform, data] of Object.entries(platforms)) {
     if (data.regex.test(url)) {
       return { platform, endpoint: data.endpoint };
     }
@@ -104,49 +99,44 @@ const detectPlatform = (url) => {
 };
 
 const downloadVideo = async (apiUrl, url) => {
-  const match = detectPlatform(url);
-  if (!match) throw new Error("Unsupported platform");
-
-  const { platform, endpoint } = match;
-  const endpointUrl = `${apiUrl}${endpoint}${encodeURIComponent(url)}`;
-
-  try {
-    const res = await axios.get(endpointUrl, { timeout: 15000 });
-    
-    if (!res.data) throw new Error("Empty API response");
-    
-    const videoUrl = res.data?.videos?.[0]?.url || res.data?.url;
-    if (!videoUrl) throw new Error("No video URL found");
-    
-    return { downloadUrl: videoUrl, platform };
-  } catch (error) {
-    console.error(`Download failed for ${url}:`, error.message);
-    throw new Error(`Failed to download from ${platform}`);
-  }
+const match = detectPlatform(url);
+  if (!match) {
+    throw new Error("No matching platform for the provided URL.");
 };
 
 module.exports.onChat = async ({ api, event, args }) => {
   const { body, threadID, messageID } = event;
 
-  // Handle command toggle
-  if (args[0]?.toLowerCase() === 'off') {
-    isEnabled = false;
-    saveConfig();
-    return api.sendMessage(
-      "🔴 AutoDL command has been disabled",
-      threadID,
-      messageID
-    );
-  }
+  // Check if message starts with the command prefix
+  if (body && body.toLowerCase().startsWith("autodl")) {
+    const command = args[0]?.toLowerCase();
 
-  if (args[0]?.toLowerCase() === 'on') {
-    isEnabled = true;
-    saveConfig();
-    return api.sendMessage(
-      "🟢 AutoDL command has been enabled",
-      threadID,
-      messageID
-    );
+    // Handle on/off commands
+    if (command === 'off') {
+      isEnabled = false;
+      saveConfig();
+      return api.sendMessage(
+        "🔴 AutoDL command has been disabled",
+        threadID,
+        messageID
+      );
+    }
+    else if (command === 'on') {
+      isEnabled = true;
+      saveConfig();
+      return api.sendMessage(
+        "🟢 AutoDL command has been enabled",
+        threadID,
+        messageID
+      );
+    }
+    else if (command === 'status') {
+      return api.sendMessage(
+        `AutoDL is currently ${isEnabled ? "🟢 enabled" : "🔴 disabled"}`,
+        threadID,
+        messageID
+      );
+    }
   }
 
   // Check if command is disabled
@@ -158,7 +148,7 @@ module.exports.onChat = async ({ api, event, args }) => {
     );
   }
 
-  // Extract URL from message
+  // Original URL processing functionality
   const urlMatch = body?.match(/https?:\/\/[^\s]+/);
   if (!urlMatch) return;
 
