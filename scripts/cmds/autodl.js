@@ -48,7 +48,7 @@ const dApi = async () => {
 
 module.exports.config = {
   name: "autodl",
-  version: "1.7.0",
+  version: "1.7.1",
   author: "Nazrul",
   role: 0,
   description: "Auto-download videos from supported platforms (toggle with on/off)",
@@ -57,6 +57,13 @@ module.exports.config = {
   guide: {
     en: "{pn} [on|off] - Toggle command\n{pn} <url> - Download video\nSupported: TikTok, FB, YT, Twitter, Instagram, Threads"
   },
+};
+
+// Required onStart function
+module.exports.onStart = async ({ api, event }) => {
+  // Initialization code can go here
+  console.log("AutoDL command initialized");
+  // You could add startup messages or other initialization logic here
 };
 
 const platforms = {
