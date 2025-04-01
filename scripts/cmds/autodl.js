@@ -151,7 +151,7 @@ module.exports.run = async function({ api, event, args }) {
 
   try {
     // Get API endpoint
-    const apiUrl = "https://your-api-endpoint.com"; // Replace with actual API
+    const apiUrl = "https://raw.githubusercontent.com/nazrul4x/Noobs/main/Apis.json"; // Replace with actual API
     const endpoint = platforms[platform].endpoint;
     const fullUrl = `${apiUrl}${endpoint}${encodeURIComponent(url)}`;
 
