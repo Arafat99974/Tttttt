@@ -55,13 +55,15 @@ function saveConfig() {
 
 module.exports.config = {
   name: "autodl",
-  version: "1.7.6",
-  hasPermssion: 0,
-  credits: "Nazrul",
-  description: "Download videos from social media platforms",
-  commandCategory: "media",
-  usages: "autodl [on|off|status] or send URL",
-  cooldowns: 10
+  version: "1.6.9",
+  author: "Nazrul",
+  role: 0,
+  description: "Automatically download videos from supported platforms!",
+  category: "𝗠𝗘𝗗𝗜𝗔",
+  countDown: 10,
+  guide: {
+    en: "autodl [on|off|status] or send URL"
+  },
 };
 
 // ============================================
