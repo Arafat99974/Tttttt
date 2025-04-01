@@ -14,12 +14,12 @@ module.exports.config = {
   name: "autodl",
   version: "1.6.9",
   author: "Nazrul",
-  role: 1, // Changed to 1 to restrict to admin (adjust as needed)
+  role: 0, // Kept at 0 for no restrictions
   description: "Automatically download videos from supported platforms!",
   category: "𝗠𝗘𝗗𝗜𝗔",
   countDown: 10,
   guide: {
-    en: "{pn} [on|off] - Turn auto-downloader on/off\nOr send a video link to download",
+    en: "To toggle: {pn} on/off\nOr send a video link to download",
   },
 };
 
@@ -88,31 +88,26 @@ module.exports.onChat = async ({ api, event, args }) => {
   if (!body) return;
 
   // Handle on/off commands
-  if (args[0] === "on" || args[0] === "off") {
-    // Check if user has permission (role 1 is admin)
-    if (this.config.role > 0) {
-      const permission = await checkPermission(api, event.senderID);
-      if (!permission) {
-        return api.sendMessage("⚠️ You don't have permission to use this command.", threadID, messageID);
-      }
-    }
-
-    autodlEnabled = args[0] === "on";
+  if (args[0]?.toLowerCase() === "on" || args[0]?.toLowerCase() === "off") {
+    autodlEnabled = args[0].toLowerCase() === "on";
     return api.sendMessage(
-      `✅ Auto-downloader is now ${autodlEnabled ? "ENABLED" : "DISABLED"}`,
+      `⚡ Auto-downloader is now ${autodlEnabled ? "ENABLED" : "DISABLED"}`,
       threadID,
       messageID
     );
   }
 
   // If autodl is disabled, ignore video links
-  if (!autodlEnabled) return;
+  if (!autodlEnabled) {
+    api.setMessageReaction("❌", event.messageID, (err) => {}, true);
+    return;
+  }
 
   // Original URL handling
   const urlMatch = body.match(/https?:\/\/[^\s]+/);
   if (!urlMatch) return;
   
-  api.setMessageReaction("🤷🏻‍♂️", event.messageID, (err) => {}, true);
+  api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
   const url = urlMatch[0];
 
   const platformMatch = detectPlatform(url);
@@ -126,24 +121,14 @@ module.exports.onChat = async ({ api, event, args }) => {
     const videoStream = await axios.get(downloadUrl, { responseType: "stream" });
     api.sendMessage(
       {
-        body: `✅ Successfully downloaded the video!\n🔖 Platform: ${platform}\n😜Power by Ew'r ShAn's😪`,
+        body: `✅ Successfully downloaded the video!\n🔖 Platform: ${platform}\nStatus: ${autodlEnabled ? "ON" : "OFF"}\n😜 Power by Ew'r ShAn's 😪`,
         attachment: [videoStream.data],
       },
       threadID,
       messageID
     );
   } catch (error) {
+    api.setMessageReaction("❌", event.messageID, (err) => {}, true);
     console.error(`❌ Error while processing the URL:`, error.message);
   }
 };
-
-// Helper function to check permissions (compatible with Goat-Bot-V2)
-async function checkPermission(api, senderID) {
-  try {
-    const adminIDs = await api.getThreadAdministrators(api.getCurrentUserID());
-    return adminIDs.includes(senderID);
-  } catch (error) {
-    console.error("Error checking permissions:", error);
-    return false;
-  }
-}
