@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require("axios");
 
 module.exports.config = {
@@ -44,3 +45,5 @@ module.exports.onStart = async ({ event, args, api }) => {
     api.sendMessage("Error: " + e.message, event.threadID, event.messageID);
   }
 };
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });
