@@ -192,7 +192,34 @@ module.exports.onStart = async ({ api, event, args }) => {
 module.exports.onChat = async ({ api, event }) => {
   const { threadID, messageID, body, senderID } = event;
 
-  const cMessages = ["🎀 Hello bby!", "🎀 Hi there!", "🎀 Hey! How can I help?😝", "চুপ চাপ Propose কর আমারে🫢", "😑 দূরে যাইয়া মুরি খাঁ, তোর কোনো কাজ কাম নাই"];
+  const cMessages = ["🎀 Hello bby!", 
+    "🎀 Hi there!", 
+    "🎀 Hey! How can I help?😝", 
+    "চুপ চাপ Propose কর আমারে🫢", 
+    "😑 দূরে যাইয়া মুরি খাঁ, তোর কোনো কাজ কাম নাই", 
+    "কি হয়ছে বেবি দাকস কেন 🍆🙂",
+    "আমারে কেনো লাগবে তুর বল 🦆",
+    "Ami ekhane bby 🥹",
+    "Amake vhule jaw 🤌😫",
+    "Ei ne amar rubbish boss er id\n\n✨ https://www.facebook.com/sirana252 🫰\n\namare arr disturb korbi nah jah 😑😒",
+    "ki hoiche ki koibi ?🐐",
+    "kire bukachuda dakhtechos killai etw🐐👈",
+    "Ami shudhu ShAn er bbu🤌😫",
+    "I love you ummmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmaaaaaaaaaaaaaaaaaaahhhhhhhhh🫦💋",
+    "Kire bolod, amare koitechos naki? 🐸",
+    "Ei new jush khaw, bot bolte bolte hapai gecho 🧃",
+    "Amake vhule jao 🥺",
+    "Ami shudhu ShAn er. Don't disturb me! 🤦",
+    "bujhchi tui je Single na hole amare dakti na ekhon ki bolbi bol! 🙂🤌",
+    "Ei mon tumake dilam 🦆💨",
+    "Bujhchi tur kew nai amar motoi single 🫶💔",
+    "কিরে বলদ তুই এইখানে !?🍆",
+    "জানিস তুর আর আমার মিল কিসে ? ওইটা হচ্ছে তুই ও লুইচ্চা আর আমার কথা কি কমু!?🙂🚬",
+    "আমার বস ShAn রে ডাক ওই সিঙ্গেল আছে 🐸🫦",
+    "কি হইছে আমার কি কাজে লাগবে তুর !?🌚👀",
+    "তুই সেই লুইচ্চাটা না !? 🙂🔪",
+    "Bby daktecho kno ummmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmaaaaaaaaaaaaaaaaaaahhhhhhhhh 🫦💋\n\n🗣️ShAn🐸🔪",
+    "Tui ki janosh tui ekhta bolod !? 🦆💨"];
   const userInput = body.toLowerCase().trim();
 
   const keywords = ["bby", "shan", "faiza", "hii", "baby", "bot", "বট", "robot"];
