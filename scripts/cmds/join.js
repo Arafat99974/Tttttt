@@ -8,7 +8,7 @@ module.exports = {
 		version: "2.0",
 		author: "𝗦𝗵𝗔𝗻",
 		countDown: 5,
-		role: 2,
+		role: 0,
 		shortDescription: "Join the group that bot is in",
 		longDescription: "",
 		category: "𝗕𝗢𝗫 𝗠𝗔𝗡𝗔𝗚𝗘𝗠𝗘𝗡𝗧",
