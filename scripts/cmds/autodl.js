@@ -8,9 +8,9 @@ const dApi = async () => {
 };
 
 module.exports.config = {
-  name: "autodl",
+  name: "autodown",
   version: "1.6.9",
-  author: "ShAn",
+  author: "𝗦𝗵𝗔𝗻",
   role: 0,
   description: "Automatically download videos from supported platforms!",
   category: "𝗠𝗘𝗗𝗜𝗔",
@@ -19,6 +19,7 @@ module.exports.config = {
     en: "Send a valid video link from supported platforms (TikTok, Facebook, YouTube, Twitter, Instagram, etc.), and the bot will download it automatically.",
   },
 };
+
 module.exports.onStart = ({}) => {};
 
 const platforms = {
@@ -32,10 +33,10 @@ const platforms = {
   },
   YouTube: {
     regex: /(?:https?:\/\/)?(?:www\.)?(youtube\.com|youtu\.be)/,
-    endpoint: "/nazrul/ytDL?uri=",
+    endpoint: "/nazrul/ytDL2?url=",
   },
   Twitter: {
-    regex: /(?:https?:\/\/)?(?:www\.)?x\.com/,
+    regex: /(?:https?:\/\/)?(?:www\.)?twitter\.com/,
     endpoint: "/nazrul/alldl?url=",
   },
   Instagram: {
@@ -45,7 +46,7 @@ const platforms = {
   Threads: {
     regex: /(?:https?:\/\/)?(?:www\.)?threads\.net/,
     endpoint: "/nazrul/alldl?url=",
-  },
+  }
 };
 
 const detectPlatform = (url) => {
@@ -89,20 +90,22 @@ module.exports.onChat = async ({ api, event }) => {
 
   const urlMatch = body.match(/https?:\/\/[^\s]+/);
   if (!urlMatch) return;
-  api.setMessageReaction("🤷🏻‍♂️", event.messageID, (err) => {}, true);
+
   const url = urlMatch[0];
 
   const platformMatch = detectPlatform(url);
-  if (!platformMatch) return;// Ignore unsupported URLs
+  if (!platformMatch) return; // Ignore unsupported URLs
+
   try {
     const apiUrl = await dApi();
-    api.setMessageReaction("✔️", event.messageID, (err) => {}, true);
+
     const { downloadUrl, platform } = await downloadVideo(apiUrl, url);
 
     const videoStream = await axios.get(downloadUrl, { responseType: "stream" });
+
     api.sendMessage(
       {
-        body: `✅ Successfully downloaded the video!\n🔖 Platform: ${platform}\n😜Power by Ew'r ShAn's😪`,
+        body: `✅ Successfully downloaded the video!\n🔖 Platform: ${platform}\n🔖Power By: Ewr ShAn 😜`,
         attachment: [videoStream.data],
       },
       threadID,
