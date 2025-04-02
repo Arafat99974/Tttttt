@@ -6,12 +6,12 @@ module.exports = {
 	config: {
 		name: "join",
 		version: "2.0",
-		author: "ShAn",
+		author: "𝗦𝗵𝗔𝗻",
 		countDown: 5,
 		role: 2,
 		shortDescription: "Join the group that bot is in",
 		longDescription: "",
-		category: "owner",
+		category: "𝗕𝗢𝗫 𝗠𝗔𝗡𝗔𝗚𝗘𝗠𝗘𝗡𝗧",
 		guide: {
 			en: "{p}{n}",
 		},
