@@ -219,7 +219,7 @@ module.exports.onChat = async ({ api, event }) => {
     "আমার বস ShAn রে ডাক ওই সিঙ্গেল আছে 🐸🫦",
     "কি হইছে আমার কি কাজে লাগবে তুর !?🌚👀",
     "তুই সেই লুইচ্চাটা না !? 🙂🔪",
-    "Bby daktecho kno ummmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmaaaaaaaaaaaaaaaaaaahhhhhhhhh 🫦💋\n\n🗣️ShAn🐸🔪",
+    "..Bby daktecho kno ummmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmaaaaaaaaaaaaaaaaaaahhhhhhhhh 🫦💋\n\n🗣️ShAn🐸🔪",
     "Tui ki janosh tui ekhta bolod !? 🦆💨"];
   const userInput = body.toLowerCase().trim();
 
