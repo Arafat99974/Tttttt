@@ -4,13 +4,13 @@ module.exports = {
     config: {
         name: "gf",
         version: "1.0.0",
-        author: "ASIF",
+        author: "𝗦𝗵𝗔𝗻",
         countDown: 5,
         role: 0,
         description: {
             en: "Find GF"
         },
-        category: "Fun",
+        category: "𝗙𝗨𝗡",
         guide: {
             en: "{n}"
         }
