@@ -3,7 +3,7 @@ module.exports = {
 		name: "pic",
 		aliases: ["pic"],
 		version: "1.0",
-		author: "ShAn",
+		author: "𝗦𝗵𝗔𝗻",
 		countDown: 5,
 		role: 0,
 		shortDescription: "send a girl photos",
@@ -17,7 +17,7 @@ module.exports = {
 		if (!permission.includes(event.senderID)) {
 			return api.sendMessage("📛 ShAn Na Korce Dimo Na😩🫶..", event.threadID, event.messageID);
 		}
-	 var link = [
+	 var ShAn = [
 "https://i.postimg.cc/wTJNSC1G/E-B9ea-WQAAst-Yg.jpg",
 "https://i.postimg.cc/sgrWyTSD/E-B9eb-AWUAINyt-B.jpg",
 "https://i.postimg.cc/TYcj48LJ/E02i-P-q-XIAE62tu.jpg",
@@ -390,12 +390,12 @@ module.exports = {
 "https://i.postimg.cc/L6CWbQbw/q1o-DN4-IN-Zd6-K5s7.jpg",
 "https://i.postimg.cc/1th2Kgjz/Vbn0-ZPWBu-CB05-j-J.jpg",
 "https://i.postimg.cc/J7Qvbzc1/zpbi-Yu-P1-WBTUrc.jpg",
-]
+];
 
-let img = link[Math.floor(Math.random()*link.length)]
+let ShaN = ShAn[Math.floor(Math.random()*ShAn.length)]
 api.setMessageReaction("🤤", event.messageID, (err) => {}, true);
 message.send({
-	body: '「 Here is your Babe😻🥵 」',attachment: await global.utils.getStreamFromURL(img)
+	body: '「 Here is your Babe😻🥵 」',attachment: await global.utils.getStreamFromURL(ShaN)
 })
 }
-		 }
+}
