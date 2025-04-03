@@ -10,7 +10,7 @@ module.exports = {
  config: {
  name: "fbcard",
  version: "1.0",
- author: "kshitiz",
+ author: "𝗦𝗵𝗔𝗻",
  countDown: 5,
  role: 0,
  shortDescription: {
@@ -21,7 +21,7 @@ module.exports = {
  vi: "",
  en: ""
  },
- category: "logo",
+ category: "𝗙𝗨𝗡",
  guide: {
  en: "{pn} <Name> <Sex> <followers> <love> <DOB> <Location> <FB Link>"
  }
