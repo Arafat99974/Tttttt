@@ -2,12 +2,12 @@ module.exports = {
  config: {
 	 name: "fuck you",
 	 version: "1.0",
-	 author: "AceGun",
+	 author: "𝗦𝗵𝗔𝗻",
 	 countDown: 5,
 	 role: 0,
 	 shortDescription: "no prefix",
 	 longDescription: "no prefix",
-	 category: "no prefix",
+	 category: "𝗙𝗨𝗡",
  },
 
  onStart: async function(){}, 
