@@ -16,7 +16,7 @@ module.exports = {
     const query = args.join(' ');
 
     if (!query) {
-      return api.sendMessage("Donne-moi une question!", event.threadID, event.messageID);
+      return api.sendMessage("Please provide a country name.\nExample (county Bangladesh.", event.threadID, event.messageID);
     }
 
     try {
