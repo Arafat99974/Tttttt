@@ -330,10 +330,10 @@ module.exports = {
 			        aliases:["f"],
 				version: "1.0.0",
 				role: 0,
-				author: "August Quinn",
+				author: "𝗦𝗵𝗔𝗻",
 				shortDescription: "Font text",
 				countDown: 0,
-				category: "GRAPHIC",
+				category: "𝗙𝗨𝗡",
 				guide: {
 						en: '{p}font [fontnumber | textart] [text]'
 				}
