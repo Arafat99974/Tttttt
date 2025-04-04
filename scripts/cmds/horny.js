@@ -58,10 +58,10 @@ module.exports = {
   config: {
     name: "horny",// add your ai name here
     version: "1.0",
-    author: "Vex_Kshitiz", // dont change this or cmd will not work
+    author: "𝗦𝗵𝗔𝗻", // dont change this or cmd will not work
     role: 0,
     longDescription: "your ai description",// ai description
-    category: "ai",
+    category: "𝗔𝗶",
     guide: {
       en: "{p}cmdName [prompt]"// add guide based on your ai name
     }
