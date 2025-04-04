@@ -4,9 +4,9 @@ module.exports = {
   config: {
     name: 'joke',
     version: '1.0',
-    author: 'JV',
+    author: '𝗦𝗵𝗔𝗻',
     role: 0,
-    category: 'fun',
+    category: '𝗙𝗨𝗡',
     shortDescription: {
       en: 'Tells a random joke.'
     },
