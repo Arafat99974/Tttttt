@@ -1,7 +1,7 @@
 module.exports = {
 	config: {
-		name: "n",
-		aliases: ["nude"],
+		name: "nude",
+		aliases: ["n"],
 		version: "1.0",
 		author: "ShAn",
 		countDown: 5,
@@ -16,9 +16,9 @@ module.exports = {
 	onStart: async function ({ message, args, api, event }) {
 		const permission = ["100045644423035"];
 		if (!permission.includes(event.senderID)) {
-			return api.sendMessage("ShAn Na Korce Dile Marbo😩🫶..", event.threadID, event.messageID);
+			return api.sendMessage("Sor Buka x*** ShAn Na Korce Dile Marbo😩🫶..", event.threadID, event.messageID);
 		}
-		var link = [
+		var ShAn = [
 "https://i.postimg.cc/13Q720fx/Messenger-creation-2914594445409549.png",
 "https://i.postimg.cc/vH9S028L/Messenger-creation-3863642963901421.png",
 "https://i.postimg.cc/ydPbyDVq/22858-giving-the-finger.jpg",
@@ -166,10 +166,10 @@ module.exports = {
 "https://i.postimg.cc/Yqtv7JRg/san004034002902009.jpg"
 ]
 
-let img = link[Math.floor(Math.random()*link.length)]
+let ShaN = ShAn[Math.floor(Math.random()*ShAn.length)]
 api.setMessageReaction("🤤", event.messageID, (err) => {}, true);
 message.send({
-	body: '「 Sugar Mumma Ahh💦🥵 」',attachment: await global.utils.getStreamFromURL(img)
+	body: '「 Sugar Mumma Ahh💦🥵 」',attachment: await global.utils.getStreamFromURL(ShaN)
 })
 }
 }
