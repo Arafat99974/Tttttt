@@ -12,13 +12,7 @@ async function checkAuthor(authorName) {
 }
 
 async function a(api, event, args, message) {
-  try {
-    const isAuthorValid = await checkAuthor(module.exports.config.author);
-    if (!isAuthorValid) {
-      await message.reply("Author changer alert! Unauthorized modification detected.");
-      return;
-    }
-
+  
     const a = args.join(" ").trim();
 
     if (!a) {
