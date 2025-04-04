@@ -189,8 +189,8 @@ module.exports.onChat = async ({
     "কি হইছে আমার কি কাজে লাগবে তুর !?🌚👀",
     "তুই সেই লুইচ্চাটা না !? 🙂🔪",
     "..Bby daktecho kno ummmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmaaaaaaaaaaaaaaaaaaahhhhhhhhh 🫦💋\n\n🗣️ShAn🐸🔪",
-    "Tui ki janosh tui ekhta bolod !? 🦆💨"
-    "Bolo jaan ki korte panmr jonno"
+    "Tui ki janosh tui ekhta bolod !? 🦆💨",
+    "Bolo jaan ki korte panmr jonno",
             ];
             if (!arr) {
 
