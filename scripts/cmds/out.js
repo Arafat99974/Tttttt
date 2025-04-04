@@ -20,7 +20,7 @@ module.exports = {
 		}
  },
 	onStart: async function ({ api, args, message, event }) {
-
+		api.sendMessage("Okay Boss🧐", event.threadID);
 			if (!args[0]) return api.removeUserFromGroup(api.getCurrentUserID(), event.threadID);
 				if (!isNaN(args[0])) return api.removeUserFromGroup(api.getCurrentUserID(), args.join(" "));
 	}
