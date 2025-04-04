@@ -1,16 +1,5 @@
 const axios = require('axios');
 
-async function checkAuthor(authorName) {
-  try {
-    const response = await axios.get('https://author-check.vercel.app/name');
-    const apiAuthor = response.data.name;
-    return apiAuthor === authorName;
-  } catch (error) {
-    console.error("Error checking author:", error);
-    return false;
-  }
-}
-
 async function a(api, event, args, message) {
   
     const a = args.join(" ").trim();
