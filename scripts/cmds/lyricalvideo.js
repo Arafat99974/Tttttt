@@ -1,14 +1,14 @@
 module.exports = {
   config: {
     name: "lyricalvideo",
-    aliases: ["lyricseditvibe", "lyricsvideo", "lyricaledit"],
+    aliases: ["lofiv"],
     version: "1.0",
-    author: "kshitiz",
+    author: "𝗦𝗵𝗔𝗻",
     countDown: 20,
     role: 0,
     shortDescription: "get lyrical video",
     longDescription: "it will send you lyrical video from lyrics edit vibe group",
-    category: "music",
+    category: "𝗠𝗘𝗗𝗜𝗔",
     guide: "{pn} lyricalvideo",
   },
 
