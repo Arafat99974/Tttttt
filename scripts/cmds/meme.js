@@ -6,9 +6,9 @@ module.exports = {
     name: 'meme',
     aliases: ['funnymeme', 'memepic'],
     version: '1.0',
-    author: 'Samir Thakuri',
+    author: '𝗦𝗵𝗔𝗻',
     role: 0,
-    category: 'funny',
+    category: '𝗙𝗨𝗡',
     shortDescription: {
       en: 'Sends a random meme image.'
     },
