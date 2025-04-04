@@ -6,7 +6,7 @@ module.exports = {
   config: {
     name: "l2m",
     version: "1.0",
-    author: "August Quinn & kshitiz",
+    author: "Shan",
     countDown: 5,
     role: 0,
     shortDescription: "",
