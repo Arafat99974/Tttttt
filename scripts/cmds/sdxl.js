@@ -11,7 +11,7 @@ module.exports = {
     cooldowns: 20,
     role: 0,
     shortDescription: "Generate an image using the SDXL2 API.",
-    longDescription: "Generates an image using the provided prompt with the SDXL2 API.",
+    longDescription: "Generates an a image using the provided prompt with the SDXL2 API.",
     category: "𝗙𝗨𝗠",
     guide: "{p}sdxl <prompt>"
   },
